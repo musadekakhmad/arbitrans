@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arbi Trans | Sewa Mobil & Motor Purwokerto</title>
-    <meta name="description" content="Arbi Trans - Solusi Transportasi Anda. Jasa rental mobil dan motor terpercaya di Purwokerto, armada prima, harga murah, dan layanan 24 jam.">
+    <title>Arbi Trans | Solusi Transportasi Anda</title>
+    <meta name="description" content="Arbi Trans - Jasa rental mobil & motor, kursus setir mobil, dan paket tour wisata terbaik di Purwokerto, Banyumas.">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome untuk Ikon -->
+    <!-- FontAwesome Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- Alpine.js untuk Fitur Pindah Tab & Kalkulator Form -->
+    <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <script>
@@ -21,123 +21,139 @@
                         brand: {
                             50: '#f0f7ff',
                             100: '#e0effe',
-                            600: '#1d4ed8',
-                            700: '#1e40af',
-                            800: '#1e3a8a',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
                         }
                     }
                 }
             }
         }
     </script>
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased font-sans" x-data="{ tab: 'mobil', whatsappNumber: '6281542952220' }">
 
-    <!-- Header / Navbar -->
-    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100 shadow-sm">
+    <!-- Navbar Sticky Modern -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center gap-2">
-                    <div class="bg-brand-600 text-white p-2.5 rounded-xl shadow-md shadow-brand-600/20">
-                        <i class="fas fa-car-side text-xl"></i>
+                    <div class="bg-brand-600 text-white p-2.5 rounded-xl shadow-md">
+                        <i class="fas fa-route text-xl"></i>
                     </div>
                     <div>
-                        <span class="font-extrabold text-2xl tracking-tight text-brand-700">Arbi<span class="text-slate-900">Trans</span></span>
-                        <p class="text-[10px] text-slate-500 font-medium tracking-wider uppercase -mt-1">Solusi Transportasi Anda</p>
+                        <span class="font-black text-2xl tracking-tight text-brand-700">Arbi<span class="text-slate-900">Trans</span></span>
+                        <p class="text-[10px] text-slate-500 font-bold tracking-wider uppercase -mt-1">Solusi Transportasi Anda</p>
                     </div>
                 </div>
-                <nav class="hidden md:flex space-x-8 font-medium text-slate-600">
+                <nav class="hidden md:flex space-x-8 font-semibold text-slate-600 text-sm">
                     <a href="#home" class="hover:text-brand-600 transition">Beranda</a>
+                    <a href="#layanan" class="hover:text-brand-600 transition">Layanan</a>
                     <a href="#armada" class="hover:text-brand-600 transition">Armada</a>
                     <a href="#keunggulan" class="hover:text-brand-600 transition">Keunggulan</a>
-                    <a href="#kontak" class="hover:text-brand-600 transition">Kontak</a>
                 </nav>
                 <div>
-                    <a :href="'https://wa.me/' + whatsappNumber" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-xl font-semibold shadow-lg shadow-emerald-500/20 transition flex items-center gap-2 text-sm">
-                        <i class="fab fa-whatsapp text-lg"></i> Hubungi Kami
+                    <a :href="'https://wa.me/' + whatsappNumber" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-xl font-bold shadow-lg shadow-emerald-500/20 transition flex items-center gap-2 text-sm">
+                        <i class="fab fa-whatsapp text-base"></i> Chat Admin
                     </a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative bg-gradient-to-br from-brand-800 to-brand-700 text-white py-12 lg:py-24 overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Hero Section dengan Slider / Carousel Otomatis -->
+    <section id="home" class="relative bg-slate-900 text-white overflow-hidden min-h-[550px] flex items-center" 
+             x-data="{ 
+                activeSlide: 0, 
+                slides: [
+                    { title: 'Eksplorasi Tanpa Batas Bersama Arbi Trans', desc: 'Sewa mobil dan motor lepas kunci atau dengan supir terbaik di Purwokerto.', tag: '🚗 RENTAL KENDARAAN', img: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1200' },
+                    { title: 'Kursus Setir Mobil Profesional & Ramah', desc: 'Belajar menyetir jadi lebih mudah, aman, dan cepat mahir didampingi instruktur berpengalaman.', tag: '🎓 KURSUS SETIR', img: 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=1200' },
+                    { title: 'Paket Tour Wisata Menarik & Custom', desc: 'Jelajahi keindahan Baturraden, Dieng, atau rute impian Anda dengan layanan akomodasi lengkap.', tag: '🗺️ PAKET TOUR', img: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=1200' }
+                ],
+                init() { setInterval(() => { this.activeSlide = (this.activeSlide + 1) % this.slides.length }, 5000) }
+             }">
+        
+        <!-- Background Images Loop -->
+        <template x-for="(slide, index) in slides" :key="index">
+            <div x-show="activeSlide === index" 
+                 x-transition:enter="transition ease-out duration-1000"
+                 x-transition:enter-start="opacity-0 transform scale-105"
+                 x-transition:enter-end="opacity-100 transform scale-100"
+                 class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent z-10"></div>
+                <img :src="slide.img" alt="Arbi Trans Hero" class="w-full h-full object-cover opacity-40">
+            </div>
+        </template>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 py-16 w-full">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Teks Slider -->
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <span class="bg-white/10 backdrop-blur-md text-white text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full border border-white/20">
-                        ✨ Sewa Mobil & Motor Terlengkap di Purwokerto
-                    </span>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
-                        Eksplorasi Purwokerto Bersama Arbi Trans
-                    </h1>
-                    <p class="text-lg text-brand-100 max-w-2xl mx-auto lg:mx-0">
-                        Armada prima harian, lepas kunci, atau dengan supir ramah. Siap melayani perjalanan wisata Baturraden, bisnis, maupun kebutuhan keluarga.
-                    </p>
+                    <span class="inline-block bg-brand-600 text-white text-xs font-black tracking-widest uppercase px-4 py-1.5 rounded-md" x-text="slides[activeSlide].tag"></span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight min-h-[120px] sm:min-h-[160px] lg:min-h-[auto]" x-text="slides[activeSlide].title"></h1>
+                    <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 min-h-[60px]" x-text="slides[activeSlide].desc"></p>
                     <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
-                        <a href="#armada" class="bg-white text-brand-700 hover:bg-brand-50 px-8 py-3.5 rounded-xl font-bold transition shadow-lg text-sm">
-                            Lihat Katalog Armada
+                        <a href="#armada" class="bg-brand-600 hover:bg-brand-700 text-white px-8 py-3.5 rounded-xl font-bold transition shadow-lg shadow-brand-600/30 text-sm">
+                            Booking Sekarang
+                        </a>
+                        <a href="#layanan" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-3.5 rounded-xl font-bold transition text-sm backdrop-blur-sm">
+                            Lihat Layanan Kami
                         </a>
                     </div>
                 </div>
 
-                <!-- Form Booking Otomatis (Akan Berfungsi Normal di Cloudflare) -->
-                <div class="lg:col-span-5" x-data="{ orderType: 'Mobil', unitName: 'Toyota Avanza', rentDate: '', duration: '1 Hari' }">
+                <!-- Form Pemesanan Instan -->
+                <div class="lg:col-span-5" x-data="{ serviceType: 'Rental Kendaraan', unitChoice: 'Innova Reborn', rentDate: '' }">
                     <div class="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 text-slate-800 border border-slate-100">
-                        <h3 class="text-xl font-bold text-slate-900 mb-1">Pemesanan Cepat</h3>
-                        <p class="text-slate-500 text-xs mb-6">Pilih unit & sistem akan membuatkan pesan WhatsApp otomatis.</p>
+                        <h3 class="text-xl font-extrabold text-slate-900 mb-1">Pesan Cepat Instan</h3>
+                        <p class="text-slate-400 text-xs mb-5">Pilih layanan & dapatkan format konfirmasi WhatsApp otomatis.</p>
                         
                         <div class="space-y-4">
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Jenis Kendaraan</label>
-                                <div class="grid grid-cols-2 gap-2">
-                                    <button type="button" @click="orderType = 'Mobil'; unitName = 'Toyota Avanza'" :class="orderType === 'Mobil' ? 'bg-brand-600 text-white' : 'bg-slate-100 text-slate-600'" class="py-2.5 rounded-xl font-semibold text-sm transition">🚗 Mobil</button>
-                                    <button type="button" @click="orderType = 'Motor'; unitName = 'Honda Vario 160'" :class="orderType === 'Motor' ? 'bg-brand-600 text-white' : 'bg-slate-100 text-slate-600'" class="py-2.5 rounded-xl font-semibold text-sm transition">🛵 Motor</button>
-                                </div>
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Pilih Model Unit</label>
-                                <select x-model="unitName" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-brand-600 focus:outline-none">
-                                    <template x-if="orderType === 'Mobil'">
-                                        <g>
-                                            <option value="Toyota Avanza">Toyota Avanza New</option>
-                                            <option value="Mitsubishi Xpander">Mitsubishi Xpander</option>
-                                            <option value="Toyota Innova Reborn">Toyota Innova Reborn</option>
-                                        </g>
-                                    </template>
-                                    <template x-if="orderType === 'Motor'">
-                                        <g>
-                                            <option value="Honda Vario 160">Honda Vario 160 cc</option>
-                                            <option value="Yamaha NMAX">Yamaha NMAX New</option>
-                                            <option value="Honda Beat">Honda Beat FI</option>
-                                        </g>
-                                    </template>
+                                <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Pilih Kategori Layanan</label>
+                                <select x-model="serviceType" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm font-semibold text-slate-700 focus:ring-2 focus:ring-brand-600 focus:outline-none">
+                                    <option value="Rental Kendaraan">🚘 Rental Mobil / Motor</option>
+                                    <option value="Kursus Setir Mobil">🎓 Kursus Setir Mobil</option>
+                                    <option value="Paket Tour Wisata">🗺️ Paket Tour Wisata</option>
                                 </select>
                             </div>
 
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Mulai Tanggal</label>
-                                    <input type="date" x-model="rentDate" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-brand-600 focus:outline-none">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Durasi</label>
-                                    <select x-model="duration" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-brand-600 focus:outline-none">
-                                        <option value="1 Hari">1 Hari</option>
-                                        <option value="2 Hari">2 Hari</option>
-                                        <option value="3 Hari">3 Hari</option>
-                                        <option value="7 Hari">1 Minggu</option>
-                                    </select>
-                                </div>
+                            <!-- Opsi Pilihan Unit Dinamis jika memilih Rental Kendaraan -->
+                            <div x-show="serviceType === 'Rental Kendaraan'" x-transition>
+                                <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Pilih Unit Armada</label>
+                                <select x-model="unitChoice" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-700 focus:ring-2 focus:ring-brand-600 focus:outline-none">
+                                    <optgroup label="Mobil">
+                                        <option value="Innova Reborn">Innova Reborn</option>
+                                        <option value="Toyota Fortuner">Toyota Fortuner</option>
+                                        <option value="Toyota Hiace">Toyota Hiace</option>
+                                        <option value="Toyota Avanza">Toyota Avanza</option>
+                                        <option value="Mitsubishi Xpander">Mitsubishi Xpander</option>
+                                        <option value="Daihatsu Gran Max PU">Daihatsu Gran Max PU</option>
+                                    </optgroup>
+                                    <optgroup label="Motor">
+                                        <option value="Yamaha NMAX">Yamaha NMAX</option>
+                                        <option value="Honda PCX">Honda PCX</option>
+                                        <option value="Honda Beat">Honda Beat</option>
+                                        <option value="Honda Vario">Honda Vario</option>
+                                        <option value="Honda Supra X">Honda Supra X</option>
+                                    </optgroup>
+                                </select>
                             </div>
 
-                            <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20booking%20unit%20' + orderType + '%20' + unitName + '%20mulai%20tanggal%20' + rentDate + '%20dengan%20durasi%20' + duration + '.%20Apakah%20unit%20tersedia?'" 
+                            <div>
+                                <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Tanggal Pelaksanaan / Booking</label>
+                                <input type="date" x-model="rentDate" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-brand-600 focus:outline-none">
+                            </div>
+
+                            <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20memesan%20layanan%20' + serviceType + (serviceType === 'Rental Kendaraan' ? '%20Unit%20' + unitChoice : '') + '%20pada%20tanggal%20' + rentDate + '.%20Apakah%20masih%20tersedia?'" 
                                target="_blank" 
-                               class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-4 rounded-xl transition text-center block shadow-lg shadow-emerald-500/10 text-sm mt-4">
-                                <i class="fab fa-whatsapp mr-1 text-base"></i> Cek Ketersediaan Unit via WA
+                               class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-black py-3.5 px-4 rounded-xl transition text-center block shadow-lg shadow-emerald-500/20 text-sm mt-4">
+                                <i class="fab fa-whatsapp mr-1 text-base"></i> Hubungi WhatsApp Sekarang
                             </a>
                         </div>
                     </div>
@@ -146,165 +162,200 @@
         </div>
     </section>
 
-    <!-- Katalog Armada Section -->
+    <!-- Section Layanan Utama Terintegrasi -->
+    <section id="layanan" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-b border-slate-100">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Layanan Unggulan Arbi Trans</h2>
+            <p class="text-slate-500 mt-2">Menyediakan solusi mobilitas komprehensif untuk kebutuhan pribadi, bisnis, maupun edukasi.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Layanan 1 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/60 hover:shadow-xl transition duration-300">
+                <div class="w-14 h-14 bg-blue-50 text-brand-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                    <i class="fas fa-car-rear"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Sewa Mobil & Motor</h3>
+                <p class="text-slate-500 text-sm leading-relaxed mb-4">Pilihan armada terlengkap, kondisi prima, kabin wangi bersih, bisa lepas kunci atau menggunakan supir ramah berpengalaman.</p>
+                <a href="#armada" class="text-brand-600 font-bold text-sm inline-flex items-center gap-1 hover:gap-2 transition">Lihat Katalog Unit <i class="fas fa-arrow-right text-xs"></i></a>
+            </div>
+
+            <!-- Layanan 2 (KURSUS SETIR) -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/60 hover:shadow-xl transition duration-300">
+                <div class="w-14 h-14 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                    <i class="fas fa-id-card"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Kursus Setir Mobil</h3>
+                <p class="text-slate-500 text-sm leading-relaxed mb-4">Belajar aman dari nol didampingi instruktur sabar profesional. Menggunakan armada double-kopling pengaman khusus demi keselamatan.</p>
+                <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20tanya%20info%20paket%20Kursus%20Setir%20Mobil.'" target="_blank" class="text-amber-600 font-bold text-sm inline-flex items-center gap-1 hover:gap-2 transition">Daftar Kursus <i class="fas fa-arrow-right text-xs"></i></a>
+            </div>
+
+            <!-- Layanan 3 (PAKET TOUR) -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/60 hover:shadow-xl transition duration-300">
+                <div class="w-14 h-14 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                    <i class="fas fa-map-location-dot"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Paket Tour Wisata</h3>
+                <p class="text-slate-500 text-sm leading-relaxed mb-4">Tersedia paket destinasi wisata populer lokal Purwokerto, Baturraden, Dieng, Jogja atau custom itinerary sesuai request anggaran Anda.</p>
+                <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20tanya%20mengenai%20Pilihan%20Paket%20Tour%20Wisata.'" target="_blank" class="text-purple-600 font-bold text-sm inline-flex items-center gap-1 hover:gap-2 transition">Tanya Paket Tour <i class="fas fa-arrow-right text-xs"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Katalog Armada Terupdate -->
     <section id="armada" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div class="text-center max-w-3xl mx-auto mb-12">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Pilihan Armada Terbaik</h2>
-            <p class="text-slate-500 mt-2">Seluruh unit dirawat berkala, bersih, kabin wangi, dan dalam performa optimal.</p>
+            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Armada Pilihan Terupdate</h2>
+            <p class="text-slate-500 mt-2">Seluruh unit dirawat berkala secara intensif untuk performa maksimal di jalan raya.</p>
             
-            <!-- Tab Pengendali Mobil / Motor -->
+            <!-- Tab Controls -->
             <div class="inline-flex p-1.5 bg-slate-200/70 backdrop-blur-sm rounded-2xl mt-8">
-                <button type="button" @click="tab = 'mobil'" :class="tab === 'mobil' ? 'bg-white text-brand-700 shadow-sm' : 'text-slate-600 hover:text-slate-900'" class="px-6 py-2.5 rounded-xl font-bold text-sm transition flex items-center gap-2">
+                <button type="button" @click="tab = 'mobil'" :class="tab === 'mobil' ? 'bg-white text-brand-700 shadow-sm' : 'text-slate-600 hover:text-slate-900'" class="px-6 py-2.5 rounded-xl font-black text-sm transition flex items-center gap-2">
                     <i class="fas fa-car text-xs"></i> Rental Mobil
                 </button>
-                <button type="button" @click="tab = 'motor'" :class="tab === 'motor' ? 'bg-white text-brand-700 shadow-sm' : 'text-slate-600 hover:text-slate-900'" class="px-6 py-2.5 rounded-xl font-bold text-sm transition flex items-center gap-2">
+                <button type="button" @click="tab = 'motor'" :class="tab === 'motor' ? 'bg-white text-brand-700 shadow-sm' : 'text-slate-600 hover:text-slate-900'" class="px-6 py-2.5 rounded-xl font-black text-sm transition flex items-center gap-2">
                     <i class="fas fa-motorcycle text-xs"></i> Rental Motor
                 </button>
             </div>
         </div>
 
-        <!-- Tab Konten Mobil -->
-        <div x-show="tab === 'mobil'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Avanza -->
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-2">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">Toyota Avanza</h3>
-                            <p class="text-slate-400 text-xs font-semibold uppercase tracking-wider">G All New</p>
-                        </div>
-                        <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2.5 py-1 rounded-lg border border-emerald-200/50">Lepas Kunci / Supir</span>
-                    </div>
-                    <div class="h-44 bg-white flex items-center justify-center p-2 my-2">
-                        <img src="https://www.toyota.astra.co.id/sites/default/files/2021-11/1-avanza-purplish-silver.png" alt="Avanza Purwokerto" class="h-full object-contain">
-                    </div>
-                    <div class="grid grid-cols-3 text-center gap-2 text-xs font-medium text-slate-500 border-y border-slate-100 py-3 my-4">
-                        <div><i class="fas fa-users text-brand-600 mb-1 block"></i> 7 Kursi</div>
-                        <div><i class="fas fa-cogs text-brand-600 mb-1 block"></i> Manual/Matik</div>
-                        <div><i class="fas fa-gas-pump text-brand-600 mb-1 block"></i> Bensin</div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <div>
-                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Harga Mulai</p>
-                            <p class="text-xl font-black text-brand-600">Rp 300.000<span class="text-xs font-normal text-slate-400">/hari</span></p>
-                        </div>
-                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20mobil%20Toyota%20Avanza%20di%20Purwokerto.'" target="_blank" class="bg-brand-600 hover:bg-brand-700 text-white px-4 py-2.5 rounded-xl font-bold text-xs transition">Pesan Unit</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Xpander -->
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-2">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">Mitsubishi Xpander</h3>
-                            <p class="text-slate-400 text-xs font-semibold uppercase tracking-wider">Ultimate Sport</p>
-                        </div>
-                        <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2.5 py-1 rounded-lg border border-emerald-200/50">Unit Premium</span>
-                    </div>
-                    <div class="h-44 bg-white flex items-center justify-center p-2 my-2">
-                        <!-- Gambar Realistis Xpander Ultimate Putih -->
-                        <img src="https://mitsubishisurabaya.com/wp-content/uploads/2021/11/xpander-white.png" alt="Xpander Purwokerto" class="h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=400'">
-                    </div>
-                    <div class="grid grid-cols-3 text-center gap-2 text-xs font-medium text-slate-500 border-y border-slate-100 py-3 my-4">
-                        <div><i class="fas fa-users text-brand-600 mb-1 block"></i> 7 Kursi</div>
-                        <div><i class="fas fa-cogs text-brand-600 mb-1 block"></i> Automatic</div>
-                        <div><i class="fas fa-gas-pump text-brand-600 mb-1 block"></i> Bensin</div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <div>
-                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Harga Mulai</p>
-                            <p class="text-xl font-black text-brand-600">Rp 400.000<span class="text-xs font-normal text-slate-400">/hari</span></p>
-                        </div>
-                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20mobil%20Mitsubishi%20Xpander%20di%20Purwokerto.'" target="_blank" class="bg-brand-600 hover:bg-brand-700 text-white px-4 py-2.5 rounded-xl font-bold text-xs transition">Pesan Unit</a>
-                    </div>
-                </div>
-            </div>
-
+        <!-- Grid Katalog Mobil -->
+        <div x-show="tab === 'mobil'" x-cloak class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Innova Reborn -->
             <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-2">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">Innova Reborn</h3>
-                            <p class="text-slate-400 text-xs font-semibold uppercase tracking-wider">Tipe V Diesel</p>
-                        </div>
-                        <span class="bg-amber-50 text-amber-700 text-[10px] font-bold px-2.5 py-1 rounded-lg border border-amber-200/50">Terlaris</span>
+                        <h3 class="text-lg font-bold text-slate-900">Innova Reborn</h3>
+                        <span class="bg-blue-50 text-brand-700 text-[10px] font-bold px-2 py-0.5 rounded">Terlaris</span>
                     </div>
-                    <div class="h-44 bg-white flex items-center justify-center p-2 my-2">
-                        <img src="https://www.toyota.astra.co.id/sites/default/files/2020-10/1-innova-super-white.png" alt="Innova Purwokerto" class="h-full object-contain">
+                    <div class="h-40 bg-white flex items-center justify-center my-4">
+                        <img src="https://www.toyota.astra.co.id/sites/default/files/2020-10/1-innova-super-white.png" alt="Innova Reborn" class="h-full object-contain">
                     </div>
-                    <div class="grid grid-cols-3 text-center gap-2 text-xs font-medium text-slate-500 border-y border-slate-100 py-3 my-4">
-                        <div><i class="fas fa-users text-brand-600 mb-1 block"></i> 7 Kursi</div>
-                        <div><i class="fas fa-cogs text-brand-600 mb-1 block"></i> Jaminkan Nyaman</div>
-                        <div><i class="fas fa-gas-pump text-brand-600 mb-1 block"></i> Solar/Diesel</div>
+                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
+                        <span class="text-sm font-bold text-brand-600">Lepas Kunci / Supir</span>
+                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Innova%20Reborn.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
                     </div>
-                    <div class="flex justify-between items-center">
-                        <div>
-                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Harga Mulai</p>
-                            <p class="text-xl font-black text-brand-600">Rp 500.000<span class="text-xs font-normal text-slate-400">/hari</span></p>
-                        </div>
-                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20mobil%20Innova%20Reborn%20di%20Purwokerto.'" target="_blank" class="bg-brand-600 hover:bg-brand-700 text-white px-4 py-2.5 rounded-xl font-bold text-xs transition">Pesan Unit</a>
+                </div>
+            </div>
+
+            <!-- Toyota Fortuner -->
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-bold text-slate-900">Toyota Fortuner</h3>
+                        <span class="bg-amber-50 text-amber-700 text-[10px] font-bold px-2 py-0.5 rounded">Premium SUV</span>
+                    </div>
+                    <div class="h-40 bg-white flex items-center justify-center my-4">
+                        <img src="https://www.toyota.astra.co.id/sites/default/files/2024-09/1_fortuner_platinum-white-pearl-mica-attitude-black.png" alt="Fortuner" class="h-full object-contain" onerror="this.src='https://www.toyota.astra.co.id/sites/default/files/2021-11/fortuner-super-white.png'">
+                    </div>
+                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
+                        <span class="text-sm font-bold text-brand-600">Gagah & Mewah</span>
+                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Toyota%20Fortuner.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Toyota Hiace -->
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-bold text-slate-900">Toyota Hiace</h3>
+                        <span class="bg-purple-50 text-purple-700 text-[10px] font-bold px-2 py-0.5 rounded">Grup / Rombongan</span>
+                    </div>
+                    <div class="h-40 bg-white flex items-center justify-center my-4">
+                        <img src="https://www.toyota.astra.co.id/sites/default/files/2020-03/hiace-commuter-silver-metallic.png" alt="Hiace" class="h-full object-contain">
+                    </div>
+                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
+                        <span class="text-sm font-bold text-brand-600">Kapasitas Luas</span>
+                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Toyota%20Hiace.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Toyota Avanza -->
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-bold text-slate-900">Toyota Avanza</h3>
+                        <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded">Irit Ekonomis</span>
+                    </div>
+                    <div class="h-40 bg-white flex items-center justify-center my-4">
+                        <img src="https://www.toyota.astra.co.id/sites/default/files/2021-11/1-avanza-purplish-silver.png" alt="Avanza" class="h-full object-contain">
+                    </div>
+                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
+                        <span class="text-sm font-bold text-brand-600">Mobil Keluarga</span>
+                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Toyota%20Avanza.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mitsubishi Xpander -->
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-bold text-slate-900">Mitsubishi Xpander</h3>
+                        <span class="bg-blue-50 text-brand-700 text-[10px] font-bold px-2 py-0.5 rounded">Nyaman Modern</span>
+                    </div>
+                    <div class="h-40 bg-white flex items-center justify-center my-4">
+                        <img src="https://mitsubishisurabaya.com/wp-content/uploads/2021/11/xpander-white.png" alt="Xpander" class="h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=400'">
+                    </div>
+                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
+                        <span class="text-sm font-bold text-brand-600">Suspensi Empuk</span>
+                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Mitsubishi%20Xpander.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Daihatsu Gran Max PU -->
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-bold text-slate-900">Gran Max Pick Up</h3>
+                        <span class="bg-orange-50 text-orange-700 text-[10px] font-bold px-2 py-0.5 rounded">Angkutan Barang</span>
+                    </div>
+                    <div class="h-40 bg-white flex items-center justify-center my-4">
+                        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=400" alt="Gran Max PU" class="h-full object-cover rounded-xl">
+                    </div>
+                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
+                        <span class="text-sm font-bold text-brand-600">Solusi Pindahan</span>
+                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Daihatsu%20Gran%20Max%20PU.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Tab Konten Motor -->
-        <div x-show="tab === 'motor'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Vario 160 -->
+        <!-- Grid Katalog Motor -->
+        <div x-show="tab === 'motor'" x-cloak class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Yamaha NMAX -->
             <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-2">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">Honda Vario 160cc</h3>
-                            <p class="text-slate-400 text-xs font-semibold uppercase tracking-wider">Sporty Scooter</p>
-                        </div>
-                        <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2.5 py-1 rounded-lg border border-emerald-200/50">Termasuk 2 Helm</span>
+                        <h3 class="text-lg font-bold text-slate-900">Yamaha NMAX</h3>
+                        <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded">Maxi Scooter</span>
                     </div>
-                    <div class="h-44 bg-white flex items-center justify-center p-4 my-2">
-                        <img src="https://www.astra-honda.com/files/subproduct/vario-160/2024/VARIO_160_MINI_BANNER_405x370_GRANDE_MATTE_WHITE_2.png" alt="Vario 160" class="h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&q=80&w=400'">
+                    <div class="h-40 bg-white flex items-center justify-center my-4">
+                        <img src="https://www.yamaha-motor.co.id/uploads/product/product_category_premium_nmax_155_connected_abs_signature_black_2023.png" alt="NMAX" class="h-full object-contain">
                     </div>
-                    <div class="grid grid-cols-3 text-center gap-2 text-xs font-medium text-slate-500 border-y border-slate-100 py-3 my-4">
-                        <div><i class="fas fa-motorcycle text-brand-600 mb-1 block"></i> 160 cc</div>
-                        <div><i class="fas fa-helmet-safety text-brand-600 mb-1 block"></i> Helm SNI</div>
-                        <div><i class="fas fa-cloud-rain text-brand-600 mb-1 block"></i> Jas Hujan</div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <div>
-                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Harga Mulai</p>
-                            <p class="text-xl font-black text-brand-600">Rp 80.000<span class="text-xs font-normal text-slate-400">/hari</span></p>
-                        </div>
-                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20motor%20Honda%20Vario%20160%20di%20Purwokerto.'" target="_blank" class="bg-brand-600 hover:bg-brand-700 text-white px-4 py-2.5 rounded-xl font-bold text-xs transition">Pesan Unit</a>
+                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
+                        <span class="text-sm font-bold text-brand-600">Nyaman Jarak Jauh</span>
+                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Yamaha%20NMAX.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
 
-            <!-- NMAX -->
+            <!-- Honda PCX -->
             <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-2">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">Yamaha NMAX New</h3>
-                            <p class="text-slate-400 text-xs font-semibold uppercase tracking-wider">Comfort Maxi</p>
-                        </div>
-                        <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2.5 py-1 rounded-lg border border-emerald-200/50">Unit Nyaman</span>
+                        <h3 class="text-lg font-bold text-slate-900">Honda PCX</h3>
+                        <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded">Premium Scooter</span>
                     </div>
-                    <div class="h-44 bg-white flex items-center justify-center p-4 my-2">
-                        <img src="https://www.yamaha-motor.co.id/uploads/product/product_category_premium_nmax_155_connected_abs_signature_black_2023.png" alt="Nmax" class="h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80&w=400'">
+                    <div class="h-40 bg-white flex items-center justify-center my-4">
+                        <img src="https://www.astra-honda.com/files/subproduct/pcx-160/2023/subproduct-banner-pcx-405x370-px-marvelous-matte-silver-1-24102023-045330.png" alt="PCX" class="h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80&w=400'">
                     </div>
-                    <div class="grid grid-cols-3 text-center gap-2 text-xs font-medium text-slate-500 border-y border-slate-100 py-3 my-4">
-                        <div><i class="fas fa-motorcycle text-brand-600 mb-1 block"></i> 155 cc</div>
-                        <div><i class="fas fa-helmet-safety text-brand-600 mb-1 block"></i> Helm SNI</div>
-                        <div><i class="fas fa-cloud-rain text-brand-600 mb-1 block"></i> Jas Hujan</div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <div>
-                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Harga Mulai</p>
-                            <p class="text-xl font-black text-brand-600">Rp 100.000<span class="text-xs font-normal text-slate-400">/hari</span></p>
-                        </div>
-                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20motor%20Yamaha%20NMAX%20di%20Purwokerto.'" target="_blank" class="bg-brand-600 hover:bg-brand-700 text-white px-4 py-2.5 rounded-xl font-bold text-xs transition">Pesan Unit</a>
+                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
+                        <span class="text-sm font-bold text-brand-600">Eksklusif & Elegan</span>
+                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Honda%20PCX.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
@@ -313,71 +364,94 @@
             <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-2">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">Honda Beat FI</h3>
-                            <p class="text-slate-400 text-xs font-semibold uppercase tracking-wider">Lincah & Irit</p>
-                        </div>
-                        <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2.5 py-1 rounded-lg border border-emerald-200/50">Hemat</span>
+                        <h3 class="text-lg font-bold text-slate-900">Honda Beat</h3>
+                        <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded">Paling Irit</span>
                     </div>
-                    <div class="h-44 bg-white flex items-center justify-center p-4 my-2">
-                        <img src="https://www.astra-honda.com/files/subproduct/beat/2024/01-BEAT-DELUXE-BLACK-1.png" alt="Honda Beat" class="h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?auto=format&fit=crop&q=80&w=400'">
+                    <div class="h-40 bg-white flex items-center justify-center my-4">
+                        <img src="https://www.astra-honda.com/files/subproduct/beat/2024/01-BEAT-DELUXE-BLACK-1.png" alt="Beat" class="h-full object-contain">
                     </div>
-                    <div class="grid grid-cols-3 text-center gap-2 text-xs font-medium text-slate-500 border-y border-slate-100 py-3 my-4">
-                        <div><i class="fas fa-motorcycle text-brand-600 mb-1 block"></i> 110 cc</div>
-                        <div><i class="fas fa-helmet-safety text-brand-600 mb-1 block"></i> Helm SNI</div>
-                        <div><i class="fas fa-cloud-rain text-brand-600 mb-1 block"></i> Jas Hujan</div>
+                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
+                        <span class="text-sm font-bold text-brand-600">Lincah & Hemat</span>
+                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Honda%20Beat.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
                     </div>
-                    <div class="flex justify-between items-center">
-                        <div>
-                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Harga Mulai</p>
-                            <p class="text-xl font-black text-brand-600">Rp 60.000<span class="text-xs font-normal text-slate-400">/hari</span></p>
-                        </div>
-                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20motor%20Honda%20Beat%20di%20Purwokerto.'" target="_blank" class="bg-brand-600 hover:bg-brand-700 text-white px-4 py-2.5 rounded-xl font-bold text-xs transition">Pesan Unit</a>
+                </div>
+            </div>
+
+            <!-- Honda Vario -->
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-bold text-slate-900">Honda Vario</h3>
+                        <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded">Tenaga Kuat</span>
+                    </div>
+                    <div class="h-40 bg-white flex items-center justify-center my-4">
+                        <img src="https://www.astra-honda.com/files/subproduct/vario-160/2024/VARIO_160_MINI_BANNER_405x370_GRANDE_MATTE_WHITE_2.png" alt="Vario" class="h-full object-contain">
+                    </div>
+                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
+                        <span class="text-sm font-bold text-brand-600">Harian Handal</span>
+                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Honda%20Vario.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Honda Supra X -->
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-bold text-slate-900">Honda Supra X</h3>
+                        <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded">Bebek Legendaris</span>
+                    </div>
+                    <div class="h-40 bg-white flex items-center justify-center my-4">
+                        <img src="https://www.astra-honda.com/files/subproduct/supra-x-125-fi/2023/subproduct-banner-suprax-405x370-quantum-matte-black-1-24102023-045749.png" alt="Supra X" class="h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?auto=format&fit=crop&q=80&w=400'">
+                    </div>
+                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
+                        <span class="text-sm font-bold text-brand-600">Tangguh & Kuat Nanjak</span>
+                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Honda%20Supra%20X.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mengapa Memilih Kami -->
-    <section id="keunggulan" class="bg-slate-100 py-16">
+    <!-- Keunggulan Layanan -->
+    <section id="keunggulan" class="bg-slate-900 text-slate-400 py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl font-extrabold text-slate-900">Mengapa Memilih Arbi Trans?</h2>
-                <p class="text-slate-500 mt-2">Komitmen kami memberikan kenyamanan penuh untuk mobilitas Anda.</p>
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-black text-white">Mengapa Memilih Kami?</h2>
+                <p class="text-slate-400 mt-2">Arbi Trans mengutamakan keselamatan dan efisiensi waktu perjalanan Anda.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/50">
-                    <div class="w-12 h-12 bg-blue-50 text-brand-600 rounded-full flex items-center justify-center text-xl mb-4 mx-auto font-bold">
-                        <i class="fas fa-hand-holding-dollar"></i>
+                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-800">
+                    <div class="w-12 h-12 bg-brand-600 text-white rounded-xl flex items-center justify-center text-xl mb-4 mx-auto font-bold shadow-lg shadow-brand-600/20">
+                        <i class="fas fa-check-double"></i>
                     </div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Harga Transparan</h4>
-                    <p class="text-slate-500 text-sm">Tarif bersahabat dan jujur sejak awal tanpa biaya siluman tersembunyi.</p>
+                    <h4 class="text-lg font-bold text-white mb-2">Armada Terawat</h4>
+                    <p class="text-slate-400 text-sm">Semua unit selalu dibersihkan dan melalui inspeksi ketat berkala sebelum diserahkan ke tangan konsumen.</p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/50">
-                    <div class="w-12 h-12 bg-blue-50 text-brand-600 rounded-full flex items-center justify-center text-xl mb-4 mx-auto font-bold">
-                        <i class="fas fa-shield-heart"></i>
+                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-800">
+                    <div class="w-12 h-12 bg-brand-600 text-white rounded-xl flex items-center justify-center text-xl mb-4 mx-auto font-bold shadow-lg shadow-brand-600/20">
+                        <i class="fas fa-user-shield"></i>
                     </div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Armada Bersih & Aman</h4>
-                    <p class="text-slate-500 text-sm">Pengecekan mesin rutin berkala dan pembersihan kabin menyeluruh setiap sebelum disewakan.</p>
+                    <h4 class="text-lg font-bold text-white mb-2">Instruktur Ahli</h4>
+                    <p class="text-slate-400 text-sm">Khusus layanan kursus setir, Anda dibimbing penuh oleh instruktur penyabar yang berlisensi.</p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/50">
-                    <div class="w-12 h-12 bg-blue-50 text-brand-600 rounded-full flex items-center justify-center text-xl mb-4 mx-auto font-bold">
+                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-800">
+                    <div class="w-12 h-12 bg-brand-600 text-white rounded-xl flex items-center justify-center text-xl mb-4 mx-auto font-bold shadow-lg shadow-brand-600/20">
                         <i class="fas fa-headset"></i>
                     </div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Layanan Non-Stop 24 Jam</h4>
-                    <p class="text-slate-500 text-sm">Butuh kendaraan mendadak tengah malam di stasiun Purwokerto? Kami siap kirim ke lokasi.</p>
+                    <h4 class="text-lg font-bold text-white mb-2">Respon Cepat 24 Jam</h4>
+                    <p class="text-slate-400 text-sm">Customer care kami siap membantu kebutuhan booking darurat atau konsultasi wisata kapan saja.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="kontak" class="bg-slate-900 text-slate-400 pt-12 pb-6 border-t border-slate-800">
+    <!-- Footer Ringkas Modern -->
+    <footer class="bg-slate-950 text-slate-500 py-12 border-t border-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-            <span class="font-extrabold text-2xl text-white tracking-tight">Arbi<span class="text-brand-500">Trans</span></span>
-            <p class="text-xs max-w-md mx-auto">Garasi: Jl. Kober Gg. Radiul No.51, Kober, Purwokerto Barat, Banyumas, Jawa Tengah 53132</p>
-            <p class="text-xs text-slate-600 pt-4">&copy; 2026 Arbi Trans - Solusi Transportasi Anda. All rights reserved.</p>
+            <span class="font-black text-2xl text-white tracking-tight">Arbi<span class="text-brand-500">Trans</span></span>
+            <p class="text-xs max-w-md mx-auto">Garasi Utama: Jl. Kober Gg. Radiul No.51, Kober, Purwokerto Barat, Banyumas, Jawa Tengah 53132</p>
+            <p class="text-xs text-slate-700 pt-4">&copy; 2026 Arbi Trans. Hak Cipta Dilindungi Undang-Undang.</p>
         </div>
     </footer>
 
