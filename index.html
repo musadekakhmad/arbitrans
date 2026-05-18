@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arbi Rental | Sewa Rental Mobil Purwokerto Terdekat</title>
-    <meta name="description" content="Arbi Rental - Jasa rental mobil & motor, kursus setir mobil, dan paket tour wisata terbaik di Purwokerto, Banyumas.">
+    <title>Arbi Trans | Jasa Sewa & Rental Mobil Purwokerto Terdekat</title>
+    <meta name="description" content="Arbi Trans - Jasa rental mobil & motor, kursus setir mobil, dan paket tour wisata terbaik di Purwokerto, Banyumas.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -38,20 +38,19 @@
     <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <div class="flex items-center gap-2">
-                    <div class="bg-brand-800 text-white px-3 py-2 rounded font-black tracking-tight text-xl border border-slate-700 shadow-sm">
-                        <span class="text-white">ARBI</span> <span class="text-brand-500 text-xs block font-bold tracking-widest -mt-1 border-t border-slate-700 pt-0.5">RENTAL</span>
-                    </div>
+                <div class="flex items-center">
+                    <a href="#home" class="flex items-center gap-2 bg-brand-800 text-white px-4 py-2.5 rounded-lg font-black tracking-tight text-xl border border-slate-700 shadow-sm">
+                        <span class="text-white">ARBI</span>
+                        <span class="text-brand-500 font-bold border-l border-slate-600 pl-2">TRANS</span>
+                    </a>
                 </div>
-                <nav class="hidden md:flex space-x-8 font-bold text-slate-700 text-sm uppercase tracking-wider">
-                    <a href="#home" class="text-brand-600 transition">Home</a>
-                    <a href="#armada" class="hover:text-brand-600 transition">Semua Unit</a>
-                    <a href="#layanan" class="hover:text-brand-600 transition">Tentang Kami</a>
-                    <a href="#keunggulan" class="hover:text-brand-600 transition">Artikel</a>
-                    <a href="#kontak" class="hover:text-brand-600 transition">Hubungi Kami</a>
+                <nav class="hidden md:flex space-x-10 font-black text-slate-700 text-sm uppercase tracking-wider">
+                    <a href="#home" class="text-brand-600 transition">HOME</a>
+                    <a href="#armada" class="hover:text-brand-600 transition">SEMUA UNIT</a>
+                    <a href="#kontak" class="hover:text-brand-600 transition">HUBUNGI KAMI</a>
                 </nav>
                 <div>
-                    <a :href="'https://wa.me/' + admin1" target="_blank" class="border-2 border-brand-500 text-brand-600 hover:bg-brand-500 hover:text-white px-5 py-2 rounded-full font-bold transition flex items-center gap-2 text-sm">
+                    <a :href="'https://wa.me/' + admin1" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2.5 rounded-full font-bold transition flex items-center gap-2 text-sm shadow-md">
                         <i class="fab fa-whatsapp text-base"></i> BOOK NOW
                     </a>
                 </div>
@@ -59,13 +58,14 @@
         </div>
     </header>
 
-    <section id="home" class="relative bg-brand-800 text-white overflow-hidden min-h-[530px] flex items-center" 
+    <section id="home" class="relative bg-brand-800 text-white overflow-hidden min-h-[550px] flex items-center" 
              x-data="{ 
                 activeSlide: 0, 
                 slides: [
-                    { title: 'Eksplorasi Tanpa Batas Bersama Arbi Rental', desc: 'Pilihan mobil lengkap, harga transparan, dan layanan profesional untuk kebutuhan Anda.', tag: '🚗 RENTAL KENDARAAN', img: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&q=80&w=1200' },
-                    { title: 'Kursus Setir Mobil Profesional & Ramah', desc: 'Belajar menyetir jadi lebih mudah, aman, dan cepat mahir didampingi instruktur berpengalaman.', tag: '🎓 KURSUS SETIR', img: 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=1200' },
-                    { title: 'Paket Tour Wisata Menarik & Custom', desc: 'Jelajahi keindahan destinasi populer lokal Purwokerto atau rute impian Anda dengan akomodasi lengkap.', tag: '🗺️ PAKET TOUR', img: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=1200' }
+                    { title: 'Toyota Innova Reborn Premium Class', desc: 'Nikmati kenyamanan berkelas eksekutif untuk perjalanan dinas, keluarga, maupun acara penting Anda di Purwokerto.', tag: '🚗 INNOVA REBORN', img: 'https://images.unsplash.com/photo-1617469767053-d3b508a0d84e?auto=format&fit=crop&q=80&w=1200' },
+                    { title: 'Toyota Hiace Kapasitas Rombongan', desc: 'Solusi terbaik perjalanan wisata, family gathering, dan keperluan akomodasi grup besar dengan kabin yang luas.', tag: '🚌 TOYOTA HIACE', img: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&q=80&w=1200' },
+                    { title: 'Toyota Avanza Nyaman & Efisien', desc: 'Pilihan utama mobil keluarga yang lincah, tangguh, dan irit untuk segala rute jalan perkotaan maupun luar kota.', tag: '🚗 TOYOTA AVANZA', img: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&q=80&w=1200' },
+                    { title: 'Grand Max Pick Up Siap Angkut', desc: 'Partner logistik bisnis terpercaya untuk angkut barang kargo, pindahan rumah, dan kebutuhan operasional niaga.', tag: '🚚 GRAND MAX PICK UP', img: 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&q=80&w=1200' }
                 ],
                 init() { setInterval(() => { this.activeSlide = (this.activeSlide + 1) % this.slides.length }, 5000) }
              }">
@@ -77,7 +77,7 @@
                  x-transition:enter-end="opacity-100 scale-100"
                  class="absolute inset-0 z-0">
                 <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent z-10"></div>
-                <img :src="slide.img" alt="Arbi Rental Hero" class="w-full h-full object-cover opacity-40">
+                <img :src="slide.img" alt="Arbi Trans Hero Fleet" class="w-full h-full object-cover opacity-35">
             </div>
         </template>
 
@@ -88,8 +88,8 @@
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight" x-text="slides[activeSlide].title"></h1>
                     <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0" x-text="slides[activeSlide].desc"></p>
                     <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
-                        <a href="#armada" class="bg-brand-500 hover:bg-brand-600 text-white px-8 py-3.5 rounded-xl font-bold transition shadow-lg text-sm">
-                            Lihat Katalog Unit
+                        <a href="#armada" class="bg-brand-500 hover:bg-brand-600 text-white px-8 py-3.5 rounded-xl font-bold transition shadow-lg text-sm uppercase tracking-wider">
+                            Lihat Semua Unit
                         </a>
                     </div>
                 </div>
@@ -125,7 +125,6 @@
                                         <option value="Honda PCX">Honda PCX</option>
                                         <option value="Honda Beat">Honda Beat</option>
                                         <option value="Honda Vario">Honda Vario</option>
-                                        <option value="Honda Supra X">Honda Supra X</option>
                                     </optgroup>
                                 </select>
                             </div>
@@ -135,7 +134,7 @@
                                 <input type="date" x-model="rentDate" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none">
                             </div>
 
-                            <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20memesan%20layanan%20' + serviceType + (serviceType === 'Rental Kendaraan' ? '%20Unit%20' + unitChoice : '') + '%20pada%20tanggal%20' + rentDate + '.%20Apakah%20masih%20tersedia?'" 
+                            <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20memesan%20layanan%20' + serviceType + (serviceType === 'Rental Kendaraan' ? '%20Unit%20' + unitChoice : '') + '%20pada%20tanggal%20' + rentDate + '.%20Apakah%20masih%20tersedia?'" 
                                target="_blank" 
                                class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-black py-3.5 px-4 rounded-xl transition text-center block shadow-lg text-sm mt-4">
                                 <i class="fab fa-whatsapp mr-1 text-base"></i> Hubungi WhatsApp Sekarang
@@ -147,7 +146,7 @@
         </div>
     </section>
 
-    <section id="layanan" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="bg-gradient-to-br from-amber-500 to-orange-600 text-white p-8 rounded-2xl shadow-xl relative overflow-hidden group">
                 <div class="absolute right-0 bottom-0 text-9xl text-white/10 translate-x-6 translate-y-6 group-hover:scale-110 transition duration-300">
@@ -156,7 +155,7 @@
                 <span class="bg-black/20 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Layanan Edukasi</span>
                 <h3 class="text-2xl font-black mt-4 mb-2">Menerima Kursus Setir Mobil</h3>
                 <p class="text-orange-50 text-sm max-w-md leading-relaxed">Belajar mengemudi dengan aman, tenang, bimbingan sabar dari instruktur berlisensi resmi, menggunakan unit modifikasi khusus pedal ganda.</p>
-                <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Rental,%20saya%20tertarik%20dengan%20info%20Kursus%20Setir%20Mobil.'" target="_blank" class="mt-6 inline-flex items-center gap-2 bg-white text-orange-600 font-bold px-5 py-2.5 rounded-xl text-xs shadow hover:bg-orange-50 transition">
+                <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Trans,%20saya%20tertarik%20dengan%20info%20Kursus%20Setir%20Mobil.'" target="_blank" class="mt-6 inline-flex items-center gap-2 bg-white text-orange-600 font-bold px-5 py-2.5 rounded-xl text-xs shadow hover:bg-orange-50 transition">
                     Daftar Sekarang <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -168,7 +167,7 @@
                 <span class="bg-black/20 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Layanan Wisata</span>
                 <h3 class="text-2xl font-black mt-4 mb-2">Menerima Pesanan Paket Tour</h3>
                 <p class="text-blue-50 text-sm max-w-md leading-relaxed">Paket liburan keluarga atau rombongan instansi ke destinasi unggulan seperti Baturraden, Dieng, Jogja dengan manajemen perjalanan komprehensif.</p>
-                <a :href="'https://wa.me/' + admin2 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20tanya%20mengenai%20Pemesanan%20Paket%20Tour.'" target="_blank" class="mt-6 inline-flex items-center gap-2 bg-white text-blue-600 font-bold px-5 py-2.5 rounded-xl text-xs shadow hover:bg-blue-50 transition">
+                <a :href="'https://wa.me/' + admin2 + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20tanya%20mengenai%20Pemesanan%20Paket%20Tour.'" target="_blank" class="mt-6 inline-flex items-center gap-2 bg-white text-blue-600 font-bold px-5 py-2.5 rounded-xl text-xs shadow hover:bg-blue-50 transition">
                     Konsultasi Rute <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -178,14 +177,14 @@
     <section id="armada" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div class="text-center max-w-3xl mx-auto mb-12">
             <h2 class="text-3xl font-black text-slate-900 tracking-tight">Armada Pilihan Terupdate</h2>
-            <p class="text-slate-500 mt-2">Seluruh unit dirawat berkala secara intensif untuk performa maksimal di jalan raya.</p>
+            <p class="text-slate-500 mt-2">Seluruh unit dirawat berkala secara intensif untuk menjamin kenyamanan perjalanan Anda bersama Arbi Trans.</p>
             
             <div class="inline-flex p-1.5 bg-slate-200/70 backdrop-blur-sm rounded-2xl mt-8">
                 <button type="button" @click="tab = 'mobil'" :class="tab === 'mobil' ? 'bg-white text-brand-600 shadow-sm' : 'text-slate-600 hover:text-slate-900'" class="px-6 py-2.5 rounded-xl font-black text-sm transition flex items-center gap-2">
                     🚗 Rental Mobil
                 </button>
                 <button type="button" @click="tab = 'motor'" :class="tab === 'motor' ? 'bg-white text-brand-600 shadow-sm' : 'text-slate-600 hover:text-slate-900'" class="px-6 py-2.5 rounded-xl font-black text-sm transition flex items-center gap-2">
-                    🛵 Rental Motor
+                    季度 Rental Motor
                 </button>
             </div>
         </div>
@@ -194,21 +193,10 @@
             <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
                 <img src="https://images.unsplash.com/photo-1617469767053-d3b508a0d84e?auto=format&fit=crop&q=80&w=600" alt="Innova Reborn" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <h3 class="text-lg font-bold text-slate-900">Innova Reborn</h3>
+                    <h3 class="text-lg font-bold text-slate-990">Innova Reborn</h3>
                     <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
                         <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Executive Class</span>
-                        <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Innova%20Reborn.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
-                <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=600" alt="Toyota Fortuner" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg font-bold text-slate-900">Toyota Fortuner</h3>
-                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
-                        <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Premium SUV</span>
-                        <a :href="'https://wa.me/' + admin2 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Toyota%20Fortuner.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
+                        <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Innova%20Reborn.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
@@ -219,7 +207,7 @@
                     <h3 class="text-lg font-bold text-slate-900">Toyota Hiace</h3>
                     <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
                         <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Group Tour Van</span>
-                        <a :href="'https://wa.me/' + admin3 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Toyota%20Hiace.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
+                        <a :href="'https://wa.me/' + admin3 + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Toyota%20Hiace.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
@@ -230,18 +218,7 @@
                     <h3 class="text-lg font-bold text-slate-900">Toyota Avanza</h3>
                     <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
                         <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Family Car</span>
-                        <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Toyota%20Avanza.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
-                <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&q=80&w=600" alt="Mitsubishi Xpander" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg font-bold text-slate-900">Mitsubishi Xpander</h3>
-                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
-                        <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Modern Comfort</span>
-                        <a :href="'https://wa.me/' + admin2 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Mitsubishi%20Xpander.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
+                        <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Toyota%20Avanza.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
@@ -252,7 +229,7 @@
                     <h3 class="text-lg font-bold text-slate-900">Daihatsu Grand Max PU</h3>
                     <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
                         <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Kargo & Pindahan</span>
-                        <a :href="'https://wa.me/' + admin3 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Daihatsu%20Gran%20Max%20PU.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
+                        <a :href="'https://wa.me/' + admin3 + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Daihatsu%20Gran%20Max%20PU.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
@@ -265,7 +242,7 @@
                     <h3 class="text-lg font-bold text-slate-900">Yamaha NMAX</h3>
                     <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
                         <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Maxi Scooter</span>
-                        <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Yamaha%20NMAX.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
+                        <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Yamaha%20NMAX.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
@@ -276,40 +253,7 @@
                     <h3 class="text-lg font-bold text-slate-900">Honda PCX</h3>
                     <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
                         <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Premium Matic</span>
-                        <a :href="'https://wa.me/' + admin2 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Honda%20PCX.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
-                <img src="https://images.unsplash.com/photo-1622185135505-2d795003994a?auto=format&fit=crop&q=80&w=600" alt="Honda Beat" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg font-bold text-slate-900">Honda Beat</h3>
-                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
-                        <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Irit & Lincah</span>
-                        <a :href="'https://wa.me/' + admin3 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Honda%20Beat.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
-                <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&q=80&w=600" alt="Honda Vario" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg font-bold text-slate-900">Honda Vario</h3>
-                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
-                        <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Daily Power</span>
-                        <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Honda%20Vario.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
-                <img src="https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?auto=format&fit=crop&q=80&w=600" alt="Honda Supra X" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg font-bold text-slate-900">Honda Supra X</h3>
-                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
-                        <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Tangguh Hebat</span>
-                        <a :href="'https://wa.me/' + admin2 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Honda%20Supra%20X.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
+                        <a :href="'https://wa.me/' + admin2 + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Honda%20PCX.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
@@ -320,7 +264,7 @@
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="space-y-2 text-center md:text-left">
                 <h2 class="text-3xl font-black tracking-tight">Sewa Mobil Sekarang</h2>
-                <p class="text-orange-50 max-w-2xl text-sm leading-relaxed">Pilihan mobil lengkap, harga transparan, dan layanan profesional untuk kebutuhan bisnis maupun pribadi hanya di Arbi Rental Purwokerto.</p>
+                <p class="text-orange-50 max-w-2xl text-sm leading-relaxed">Pilihan mobil lengkap, harga transparan, dan layanan profesional untuk kebutuhan bisnis maupun pribadi hanya di Arbi Trans Purwokerto.</p>
             </div>
             <div>
                 <a :href="'https://wa.me/' + admin1" target="_blank" class="bg-transparent hover:bg-white hover:text-brand-600 text-white font-bold border-2 border-white px-6 py-3 rounded-full flex items-center gap-2 transition text-sm tracking-wider uppercase">
@@ -334,8 +278,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             
             <div class="space-y-4">
-                <div class="bg-brand-800 text-white px-3 py-1.5 rounded inline-block font-black text-md tracking-tight">
-                    <span>ARBI</span> <span class="text-brand-500 text-[10px] block font-bold tracking-widest -mt-1 border-t border-slate-700">TRANS</span>
+                <div class="bg-brand-800 text-white px-4 py-2 rounded inline-block font-black text-md tracking-tight">
+                    <span>ARBI TRANS</span>
                 </div>
                 <p class="font-extrabold text-slate-900 leading-snug">Arbi Trans - Sewa Rental Mobil Purwokerto Terdekat.</p>
                 <div class="pt-2">
@@ -366,10 +310,9 @@
             <div class="space-y-4">
                 <h4 class="font-black text-slate-900 text-base border-b border-slate-100 pb-2">Navigasi</h4>
                 <ul class="space-y-2.5 font-bold text-slate-700 text-xs uppercase tracking-wider">
-                    <li><a href="#home" class="hover:text-brand-500 transition inline-flex items-center gap-1.5"><i class="fas fa-chevron-right text-[10px] text-slate-300"></i> Home</a></li>
-                    <li><a href="#kontak" class="hover:text-brand-500 transition inline-flex items-center gap-1.5"><i class="fas fa-chevron-right text-[10px] text-slate-300"></i> Contact us</a></li>
-                    <li><a href="#armada" class="hover:text-brand-500 transition inline-flex items-center gap-1.5"><i class="fas fa-chevron-right text-[10px] text-slate-300"></i> Artikel</a></li>
-                    <li><a href="#" class="hover:text-brand-500 transition inline-flex items-center gap-1.5"><i class="fas fa-chevron-right text-[10px] text-slate-300"></i> Terms & Conditions</a></li>
+                    <li><a href="#home" class="hover:text-brand-500 transition inline-flex items-center gap-1.5"><i class="fas fa-chevron-right text-[10px] text-slate-300"></i> HOME</a></li>
+                    <li><a href="#armada" class="hover:text-brand-500 transition inline-flex items-center gap-1.5"><i class="fas fa-chevron-right text-[10px] text-slate-300"></i> SEMUA UNIT</a></li>
+                    <li><a href="#kontak" class="hover:text-brand-500 transition inline-flex items-center gap-1.5"><i class="fas fa-chevron-right text-[10px] text-slate-300"></i> HUBUNGI KAMI</a></li>
                 </ul>
             </div>
 
@@ -395,7 +338,7 @@
     </footer>
 
     <div class="fixed bottom-4 right-4 z-50">
-        <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20booking%20unit.'" target="_blank" class="bg-emerald-500 text-white font-extrabold px-4 py-2.5 rounded-full flex items-center gap-1.5 shadow-2xl text-xs hover:bg-emerald-600 transition tracking-wide">
+        <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20booking%20unit.'" target="_blank" class="bg-emerald-500 text-white font-extrabold px-4 py-2.5 rounded-full flex items-center gap-1.5 shadow-2xl text-xs hover:bg-emerald-600 transition tracking-wide">
             <i class="fab fa-whatsapp text-lg"></i> Booking Sekarang Juga !
         </a>
     </div>
