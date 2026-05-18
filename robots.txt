@@ -1,9 +1,3 @@
 User-agent: *
 Allow: /
-
-# Menghalang robot daripada meng-crawl folder sistem atau admin (jika ada)
-Disallow: /admin/
-Disallow: /config/
-
-# Lokasi Sitemap rasmi anda
 Sitemap: https://arbitrans.page.dev/sitemap.xml
