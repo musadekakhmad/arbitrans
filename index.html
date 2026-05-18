@@ -18,7 +18,7 @@
                         brand: {
                             50: '#fdf4f0',
                             100: '#fbe8df',
-                            500: '#ff6f43', /* Coral Orange sesuai SS */
+                            500: '#ff6f43', /* Coral Orange */
                             600: '#ea5829',
                             700: '#cb3c11',
                             800: '#0f172a', /* Dark slate navy */
@@ -62,10 +62,10 @@
              x-data="{ 
                 activeSlide: 0, 
                 slides: [
-                    { title: 'Toyota Innova Reborn Premium Class', desc: 'Nikmati kenyamanan berkelas eksekutif untuk perjalanan dinas, keluarga, maupun acara penting Anda di Purwokerto.', tag: '🚗 INNOVA REBORN', img: 'https://images.unsplash.com/photo-1617469767053-d3b508a0d84e?auto=format&fit=crop&q=80&w=1200' },
-                    { title: 'Toyota Hiace Kapasitas Rombongan', desc: 'Solusi terbaik perjalanan wisata, family gathering, dan keperluan akomodasi grup besar dengan kabin yang luas.', tag: '🚌 TOYOTA HIACE', img: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&q=80&w=1200' },
-                    { title: 'Toyota Avanza Nyaman & Efisien', desc: 'Pilihan utama mobil keluarga yang lincah, tangguh, dan irit untuk segala rute jalan perkotaan maupun luar kota.', tag: '🚗 TOYOTA AVANZA', img: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&q=80&w=1200' },
-                    { title: 'Grand Max Pick Up Siap Angkut', desc: 'Partner logistik bisnis terpercaya untuk angkut barang kargo, pindahan rumah, dan kebutuhan operasional niaga.', tag: '🚚 GRAND MAX PICK UP', img: 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&q=80&w=1200' }
+                    { title: 'Toyota Innova Reborn Premium Class', desc: 'Nikmati kenyamanan berkelas eksekutif untuk perjalanan dinas, keluarga, maupun acara penting Anda di Purwokerto.', tag: '🚗 INNOVA REBORN', img: 'innova reborn.jpg' },
+                    { title: 'Toyota Hiace Kapasitas Rombongan', desc: 'Solusi terbaik perjalanan wisata, family gathering, dan keperluan akomodasi grup besar dengan kabin yang luas.', tag: '🚌 TOYOTA HIACE', img: 'hiace.jpg' },
+                    { title: 'Toyota Avanza Nyaman & Efisien', desc: 'Pilihan utama mobil keluarga yang lincah, tangguh, dan irit untuk segala rute jalan perkotaan maupun luar kota.', tag: '🚗 TOYOTA AVANZA', img: 'avanza.jpg' },
+                    { title: 'Grand Max Pick Up Siap Angkut', desc: 'Partner logistik bisnis terpercaya untuk angkut barang kargo, pindahan rumah, dan kebutuhan operasional niaga.', tag: '🚚 GRAND MAX PICK UP', img: 'grandmax.jpg' }
                 ],
                 init() { setInterval(() => { this.activeSlide = (this.activeSlide + 1) % this.slides.length }, 5000) }
              }">
@@ -77,7 +77,7 @@
                  x-transition:enter-end="opacity-100 scale-100"
                  class="absolute inset-0 z-0">
                 <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent z-10"></div>
-                <img :src="slide.img" alt="Arbi Trans Hero Fleet" class="w-full h-full object-cover opacity-35">
+                <img :src="slide.img" alt="Arbi Trans Hero Fleet" class="w-full h-full object-cover opacity-40">
             </div>
         </template>
 
@@ -114,17 +114,9 @@
                                 <select x-model="unitChoice" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-700 focus:ring-2 focus:ring-brand-500 focus:outline-none">
                                     <optgroup label="Mobil">
                                         <option value="Innova Reborn">Innova Reborn</option>
-                                        <option value="Toyota Fortuner">Toyota Fortuner</option>
                                         <option value="Toyota Hiace">Toyota Hiace</option>
                                         <option value="Toyota Avanza">Toyota Avanza</option>
-                                        <option value="Mitsubishi Xpander">Mitsubishi Xpander</option>
-                                        <option value="Daihatsu Gran Max PU">Daihatsu Gran Max PU</option>
-                                    </optgroup>
-                                    <optgroup label="Motor">
-                                        <option value="Yamaha NMAX">Yamaha NMAX</option>
-                                        <option value="Honda PCX">Honda PCX</option>
-                                        <option value="Honda Beat">Honda Beat</option>
-                                        <option value="Honda Vario">Honda Vario</option>
+                                        <option value="Daihatsu Grand Max PU">Grand Max Pick Up</option>
                                     </optgroup>
                                 </select>
                             </div>
@@ -184,16 +176,16 @@
                     🚗 Rental Mobil
                 </button>
                 <button type="button" @click="tab = 'motor'" :class="tab === 'motor' ? 'bg-white text-brand-600 shadow-sm' : 'text-slate-600 hover:text-slate-900'" class="px-6 py-2.5 rounded-xl font-black text-sm transition flex items-center gap-2">
-                    季度 Rental Motor
+                    🏍️ Rental Motor
                 </button>
             </div>
         </div>
 
         <div x-show="tab === 'mobil'" x-cloak class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
-                <img src="https://images.unsplash.com/photo-1617469767053-d3b508a0d84e?auto=format&fit=crop&q=80&w=600" alt="Innova Reborn" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg font-bold text-slate-990">Innova Reborn</h3>
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col justify-between">
+                <img src="innova reborn.jpg" alt="Innova Reborn" class="w-full h-52 object-cover">
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <h3 class="text-lg font-bold text-slate-900">Innova Reborn</h3>
                     <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
                         <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Executive Class</span>
                         <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Innova%20Reborn.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
@@ -201,9 +193,9 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
-                <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&q=80&w=600" alt="Toyota Hiace" class="w-full h-48 object-cover">
-                <div class="p-6">
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col justify-between">
+                <img src="hiace.jpg" alt="Toyota Hiace" class="w-full h-52 object-cover">
+                <div class="p-6 flex-grow flex flex-col justify-between">
                     <h3 class="text-lg font-bold text-slate-900">Toyota Hiace</h3>
                     <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
                         <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Group Tour Van</span>
@@ -212,9 +204,9 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
-                <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&q=80&w=600" alt="Toyota Avanza" class="w-full h-48 object-cover">
-                <div class="p-6">
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col justify-between">
+                <img src="avanza.jpg" alt="Toyota Avanza" class="w-full h-52 object-cover">
+                <div class="p-6 flex-grow flex flex-col justify-between">
                     <h3 class="text-lg font-bold text-slate-900">Toyota Avanza</h3>
                     <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
                         <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Family Car</span>
@@ -223,13 +215,13 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
-                <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&q=80&w=600" alt="Daihatsu Grand Max PU" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg font-bold text-slate-900">Daihatsu Grand Max PU</h3>
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col justify-between">
+                <img src="grandmax.jpg" alt="Grand Max Pick Up" class="w-full h-52 object-cover">
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <h3 class="text-lg font-bold text-slate-900">Grand Max Pick Up</h3>
                     <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
                         <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Kargo & Pindahan</span>
-                        <a :href="'https://wa.me/' + admin3 + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Daihatsu%20Gran%20Max%20PU.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
+                        <a :href="'https://wa.me/' + admin3 + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Grand%20Max%20Pick%20Up.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
@@ -237,23 +229,14 @@
 
         <div x-show="tab === 'motor'" x-cloak class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
-                <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80&w=600" alt="Yamaha NMAX" class="w-full h-48 object-cover">
+                <div class="w-full h-52 bg-slate-200 flex items-center justify-center text-slate-400">
+                    <i class="fas fa-motorcycle text-4xl"></i>
+                </div>
                 <div class="p-6">
                     <h3 class="text-lg font-bold text-slate-900">Yamaha NMAX</h3>
                     <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
                         <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Maxi Scooter</span>
                         <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Yamaha%20NMAX.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
-                <img src="https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?auto=format&fit=crop&q=80&w=600" alt="Honda PCX" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg font-bold text-slate-900">Honda PCX</h3>
-                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
-                        <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Premium Matic</span>
-                        <a :href="'https://wa.me/' + admin2 + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Honda%20PCX.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
