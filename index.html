@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arbi Trans | Solusi Transportasi Anda</title>
-    <meta name="description" content="Arbi Trans - Jasa rental mobil & motor, kursus setir mobil, dan paket tour wisata terbaik di Purwokerto, Banyumas.">
+    <title>Arbi Rental | Sewa Rental Mobil Purwokerto Terdekat</title>
+    <meta name="description" content="Arbi Rental - Jasa rental mobil & motor, kursus setir mobil, dan paket tour wisata terbaik di Purwokerto, Banyumas.">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <script>
@@ -19,13 +16,13 @@
                 extend: {
                     colors: {
                         brand: {
-                            50: '#f0f7ff',
-                            100: '#e0effe',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            800: '#1e40af',
-                            900: '#1e3a8a',
+                            50: '#fdf4f0',
+                            100: '#fbe8df',
+                            500: '#ff6f43', /* Coral Orange sesuai SS */
+                            600: '#ea5829',
+                            700: '#cb3c11',
+                            800: '#0f172a', /* Dark slate navy */
+                            900: '#020617',
                         }
                     }
                 }
@@ -36,78 +33,67 @@
         [x-cloak] { display: none !important; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased font-sans" x-data="{ tab: 'mobil', whatsappNumber: '6281542952220' }">
+<body class="bg-slate-50 text-slate-800 antialiased font-sans" x-data="{ tab: 'mobil', admin1: '6281542952220', admin2: '628112532222', admin3: '628112543222' }">
 
-    <!-- Navbar Sticky Modern -->
-    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100 shadow-sm">
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center gap-2">
-                    <div class="bg-brand-600 text-white p-2.5 rounded-xl shadow-md">
-                        <i class="fas fa-route text-xl"></i>
-                    </div>
-                    <div>
-                        <span class="font-black text-2xl tracking-tight text-brand-700">Arbi<span class="text-slate-900">Trans</span></span>
-                        <p class="text-[10px] text-slate-500 font-bold tracking-wider uppercase -mt-1">Solusi Transportasi Anda</p>
+                    <div class="bg-brand-800 text-white px-3 py-2 rounded font-black tracking-tight text-xl border border-slate-700 shadow-sm">
+                        <span class="text-white">ARBI</span> <span class="text-brand-500 text-xs block font-bold tracking-widest -mt-1 border-t border-slate-700 pt-0.5">RENTAL</span>
                     </div>
                 </div>
-                <nav class="hidden md:flex space-x-8 font-semibold text-slate-600 text-sm">
-                    <a href="#home" class="hover:text-brand-600 transition">Beranda</a>
-                    <a href="#layanan" class="hover:text-brand-600 transition">Layanan</a>
-                    <a href="#armada" class="hover:text-brand-600 transition">Armada</a>
-                    <a href="#keunggulan" class="hover:text-brand-600 transition">Keunggulan</a>
+                <nav class="hidden md:flex space-x-8 font-bold text-slate-700 text-sm uppercase tracking-wider">
+                    <a href="#home" class="text-brand-600 transition">Home</a>
+                    <a href="#armada" class="hover:text-brand-600 transition">Semua Unit</a>
+                    <a href="#layanan" class="hover:text-brand-600 transition">Tentang Kami</a>
+                    <a href="#keunggulan" class="hover:text-brand-600 transition">Artikel</a>
+                    <a href="#kontak" class="hover:text-brand-600 transition">Hubungi Kami</a>
                 </nav>
                 <div>
-                    <a :href="'https://wa.me/' + whatsappNumber" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-xl font-bold shadow-lg shadow-emerald-500/20 transition flex items-center gap-2 text-sm">
-                        <i class="fab fa-whatsapp text-base"></i> Chat Admin
+                    <a :href="'https://wa.me/' + admin1" target="_blank" class="border-2 border-brand-500 text-brand-600 hover:bg-brand-500 hover:text-white px-5 py-2 rounded-full font-bold transition flex items-center gap-2 text-sm">
+                        <i class="fab fa-whatsapp text-base"></i> BOOK NOW
                     </a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section dengan Slider / Carousel Otomatis -->
-    <section id="home" class="relative bg-slate-900 text-white overflow-hidden min-h-[550px] flex items-center" 
+    <section id="home" class="relative bg-brand-800 text-white overflow-hidden min-h-[530px] flex items-center" 
              x-data="{ 
                 activeSlide: 0, 
                 slides: [
-                    { title: 'Eksplorasi Tanpa Batas Bersama Arbi Trans', desc: 'Sewa mobil dan motor lepas kunci atau dengan supir terbaik di Purwokerto.', tag: '🚗 RENTAL KENDARAAN', img: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1200' },
+                    { title: 'Eksplorasi Tanpa Batas Bersama Arbi Rental', desc: 'Pilihan mobil lengkap, harga transparan, dan layanan profesional untuk kebutuhan Anda.', tag: '🚗 RENTAL KENDARAAN', img: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&q=80&w=1200' },
                     { title: 'Kursus Setir Mobil Profesional & Ramah', desc: 'Belajar menyetir jadi lebih mudah, aman, dan cepat mahir didampingi instruktur berpengalaman.', tag: '🎓 KURSUS SETIR', img: 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=1200' },
-                    { title: 'Paket Tour Wisata Menarik & Custom', desc: 'Jelajahi keindahan Baturraden, Dieng, atau rute impian Anda dengan layanan akomodasi lengkap.', tag: '🗺️ PAKET TOUR', img: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=1200' }
+                    { title: 'Paket Tour Wisata Menarik & Custom', desc: 'Jelajahi keindahan destinasi populer lokal Purwokerto atau rute impian Anda dengan akomodasi lengkap.', tag: '🗺️ PAKET TOUR', img: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=1200' }
                 ],
                 init() { setInterval(() => { this.activeSlide = (this.activeSlide + 1) % this.slides.length }, 5000) }
              }">
         
-        <!-- Background Images Loop -->
         <template x-for="(slide, index) in slides" :key="index">
             <div x-show="activeSlide === index" 
                  x-transition:enter="transition ease-out duration-1000"
-                 x-transition:enter-start="opacity-0 transform scale-105"
-                 x-transition:enter-end="opacity-100 transform scale-100"
+                 x-transition:enter-start="opacity-0 scale-105"
+                 x-transition:enter-end="opacity-100 scale-100"
                  class="absolute inset-0 z-0">
                 <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent z-10"></div>
-                <img :src="slide.img" alt="Arbi Trans Hero" class="w-full h-full object-cover opacity-40">
+                <img :src="slide.img" alt="Arbi Rental Hero" class="w-full h-full object-cover opacity-40">
             </div>
         </template>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 py-16 w-full">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <!-- Teks Slider -->
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <span class="inline-block bg-brand-600 text-white text-xs font-black tracking-widest uppercase px-4 py-1.5 rounded-md" x-text="slides[activeSlide].tag"></span>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight min-h-[120px] sm:min-h-[160px] lg:min-h-[auto]" x-text="slides[activeSlide].title"></h1>
-                    <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 min-h-[60px]" x-text="slides[activeSlide].desc"></p>
+                    <span class="inline-block bg-brand-500 text-white text-xs font-black tracking-widest uppercase px-4 py-1.5 rounded" x-text="slides[activeSlide].tag"></span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight" x-text="slides[activeSlide].title"></h1>
+                    <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0" x-text="slides[activeSlide].desc"></p>
                     <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
-                        <a href="#armada" class="bg-brand-600 hover:bg-brand-700 text-white px-8 py-3.5 rounded-xl font-bold transition shadow-lg shadow-brand-600/30 text-sm">
-                            Booking Sekarang
-                        </a>
-                        <a href="#layanan" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-3.5 rounded-xl font-bold transition text-sm backdrop-blur-sm">
-                            Lihat Layanan Kami
+                        <a href="#armada" class="bg-brand-500 hover:bg-brand-600 text-white px-8 py-3.5 rounded-xl font-bold transition shadow-lg text-sm">
+                            Lihat Katalog Unit
                         </a>
                     </div>
                 </div>
 
-                <!-- Form Pemesanan Instan -->
                 <div class="lg:col-span-5" x-data="{ serviceType: 'Rental Kendaraan', unitChoice: 'Innova Reborn', rentDate: '' }">
                     <div class="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 text-slate-800 border border-slate-100">
                         <h3 class="text-xl font-extrabold text-slate-900 mb-1">Pesan Cepat Instan</h3>
@@ -116,17 +102,16 @@
                         <div class="space-y-4">
                             <div>
                                 <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Pilih Kategori Layanan</label>
-                                <select x-model="serviceType" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm font-semibold text-slate-700 focus:ring-2 focus:ring-brand-600 focus:outline-none">
+                                <select x-model="serviceType" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm font-semibold text-slate-700 focus:ring-2 focus:ring-brand-500 focus:outline-none">
                                     <option value="Rental Kendaraan">🚘 Rental Mobil / Motor</option>
                                     <option value="Kursus Setir Mobil">🎓 Kursus Setir Mobil</option>
                                     <option value="Paket Tour Wisata">🗺️ Paket Tour Wisata</option>
                                 </select>
                             </div>
 
-                            <!-- Opsi Pilihan Unit Dinamis jika memilih Rental Kendaraan -->
                             <div x-show="serviceType === 'Rental Kendaraan'" x-transition>
                                 <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Pilih Unit Armada</label>
-                                <select x-model="unitChoice" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-700 focus:ring-2 focus:ring-brand-600 focus:outline-none">
+                                <select x-model="unitChoice" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-700 focus:ring-2 focus:ring-brand-500 focus:outline-none">
                                     <optgroup label="Mobil">
                                         <option value="Innova Reborn">Innova Reborn</option>
                                         <option value="Toyota Fortuner">Toyota Fortuner</option>
@@ -146,13 +131,13 @@
                             </div>
 
                             <div>
-                                <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Tanggal Pelaksanaan / Booking</label>
-                                <input type="date" x-model="rentDate" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-brand-600 focus:outline-none">
+                                <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Tanggal Pelaksanaan</label>
+                                <input type="date" x-model="rentDate" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none">
                             </div>
 
-                            <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20memesan%20layanan%20' + serviceType + (serviceType === 'Rental Kendaraan' ? '%20Unit%20' + unitChoice : '') + '%20pada%20tanggal%20' + rentDate + '.%20Apakah%20masih%20tersedia?'" 
+                            <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20memesan%20layanan%20' + serviceType + (serviceType === 'Rental Kendaraan' ? '%20Unit%20' + unitChoice : '') + '%20pada%20tanggal%20' + rentDate + '.%20Apakah%20masih%20tersedia?'" 
                                target="_blank" 
-                               class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-black py-3.5 px-4 rounded-xl transition text-center block shadow-lg shadow-emerald-500/20 text-sm mt-4">
+                               class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-black py-3.5 px-4 rounded-xl transition text-center block shadow-lg text-sm mt-4">
                                 <i class="fab fa-whatsapp mr-1 text-base"></i> Hubungi WhatsApp Sekarang
                             </a>
                         </div>
@@ -162,298 +147,258 @@
         </div>
     </section>
 
-    <!-- Section Layanan Utama Terintegrasi -->
-    <section id="layanan" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-b border-slate-100">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Layanan Unggulan Arbi Trans</h2>
-            <p class="text-slate-500 mt-2">Menyediakan solusi mobilitas komprehensif untuk kebutuhan pribadi, bisnis, maupun edukasi.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Layanan 1 -->
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/60 hover:shadow-xl transition duration-300">
-                <div class="w-14 h-14 bg-blue-50 text-brand-600 rounded-xl flex items-center justify-center text-2xl mb-6">
-                    <i class="fas fa-car-rear"></i>
-                </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-2">Sewa Mobil & Motor</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-4">Pilihan armada terlengkap, kondisi prima, kabin wangi bersih, bisa lepas kunci atau menggunakan supir ramah berpengalaman.</p>
-                <a href="#armada" class="text-brand-600 font-bold text-sm inline-flex items-center gap-1 hover:gap-2 transition">Lihat Katalog Unit <i class="fas fa-arrow-right text-xs"></i></a>
-            </div>
-
-            <!-- Layanan 2 (KURSUS SETIR) -->
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/60 hover:shadow-xl transition duration-300">
-                <div class="w-14 h-14 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+    <section id="layanan" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-gradient-to-br from-amber-500 to-orange-600 text-white p-8 rounded-2xl shadow-xl relative overflow-hidden group">
+                <div class="absolute right-0 bottom-0 text-9xl text-white/10 translate-x-6 translate-y-6 group-hover:scale-110 transition duration-300">
                     <i class="fas fa-id-card"></i>
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-2">Kursus Setir Mobil</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-4">Belajar aman dari nol didampingi instruktur sabar profesional. Menggunakan armada double-kopling pengaman khusus demi keselamatan.</p>
-                <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20tanya%20info%20paket%20Kursus%20Setir%20Mobil.'" target="_blank" class="text-amber-600 font-bold text-sm inline-flex items-center gap-1 hover:gap-2 transition">Daftar Kursus <i class="fas fa-arrow-right text-xs"></i></a>
+                <span class="bg-black/20 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Layanan Edukasi</span>
+                <h3 class="text-2xl font-black mt-4 mb-2">Menerima Kursus Setir Mobil</h3>
+                <p class="text-orange-50 text-sm max-w-md leading-relaxed">Belajar mengemudi dengan aman, tenang, bimbingan sabar dari instruktur berlisensi resmi, menggunakan unit modifikasi khusus pedal ganda.</p>
+                <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Rental,%20saya%20tertarik%20dengan%20info%20Kursus%20Setir%20Mobil.'" target="_blank" class="mt-6 inline-flex items-center gap-2 bg-white text-orange-600 font-bold px-5 py-2.5 rounded-xl text-xs shadow hover:bg-orange-50 transition">
+                    Daftar Sekarang <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
 
-            <!-- Layanan 3 (PAKET TOUR) -->
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/60 hover:shadow-xl transition duration-300">
-                <div class="w-14 h-14 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+            <div class="bg-gradient-to-br from-blue-600 to-indigo-700 text-white p-8 rounded-2xl shadow-xl relative overflow-hidden group">
+                <div class="absolute right-0 bottom-0 text-9xl text-white/10 translate-x-6 translate-y-6 group-hover:scale-110 transition duration-300">
                     <i class="fas fa-map-location-dot"></i>
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-2">Paket Tour Wisata</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-4">Tersedia paket destinasi wisata populer lokal Purwokerto, Baturraden, Dieng, Jogja atau custom itinerary sesuai request anggaran Anda.</p>
-                <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20tanya%20mengenai%20Pilihan%20Paket%20Tour%20Wisata.'" target="_blank" class="text-purple-600 font-bold text-sm inline-flex items-center gap-1 hover:gap-2 transition">Tanya Paket Tour <i class="fas fa-arrow-right text-xs"></i></a>
+                <span class="bg-black/20 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Layanan Wisata</span>
+                <h3 class="text-2xl font-black mt-4 mb-2">Menerima Pesanan Paket Tour</h3>
+                <p class="text-blue-50 text-sm max-w-md leading-relaxed">Paket liburan keluarga atau rombongan instansi ke destinasi unggulan seperti Baturraden, Dieng, Jogja dengan manajemen perjalanan komprehensif.</p>
+                <a :href="'https://wa.me/' + admin2 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20tanya%20mengenai%20Pemesanan%20Paket%20Tour.'" target="_blank" class="mt-6 inline-flex items-center gap-2 bg-white text-blue-600 font-bold px-5 py-2.5 rounded-xl text-xs shadow hover:bg-blue-50 transition">
+                    Konsultasi Rute <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Katalog Armada Terupdate -->
-    <section id="armada" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <section id="armada" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div class="text-center max-w-3xl mx-auto mb-12">
-            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Armada Pilihan Terupdate</h2>
+            <h2 class="text-3xl font-black text-slate-900 tracking-tight">Armada Pilihan Terupdate</h2>
             <p class="text-slate-500 mt-2">Seluruh unit dirawat berkala secara intensif untuk performa maksimal di jalan raya.</p>
             
-            <!-- Tab Controls -->
             <div class="inline-flex p-1.5 bg-slate-200/70 backdrop-blur-sm rounded-2xl mt-8">
-                <button type="button" @click="tab = 'mobil'" :class="tab === 'mobil' ? 'bg-white text-brand-700 shadow-sm' : 'text-slate-600 hover:text-slate-900'" class="px-6 py-2.5 rounded-xl font-black text-sm transition flex items-center gap-2">
-                    <i class="fas fa-car text-xs"></i> Rental Mobil
+                <button type="button" @click="tab = 'mobil'" :class="tab === 'mobil' ? 'bg-white text-brand-600 shadow-sm' : 'text-slate-600 hover:text-slate-900'" class="px-6 py-2.5 rounded-xl font-black text-sm transition flex items-center gap-2">
+                    🚗 Rental Mobil
                 </button>
-                <button type="button" @click="tab = 'motor'" :class="tab === 'motor' ? 'bg-white text-brand-700 shadow-sm' : 'text-slate-600 hover:text-slate-900'" class="px-6 py-2.5 rounded-xl font-black text-sm transition flex items-center gap-2">
-                    <i class="fas fa-motorcycle text-xs"></i> Rental Motor
+                <button type="button" @click="tab = 'motor'" :class="tab === 'motor' ? 'bg-white text-brand-600 shadow-sm' : 'text-slate-600 hover:text-slate-900'" class="px-6 py-2.5 rounded-xl font-black text-sm transition flex items-center gap-2">
+                    🛵 Rental Motor
                 </button>
             </div>
         </div>
 
-        <!-- Grid Katalog Mobil -->
         <div x-show="tab === 'mobil'" x-cloak class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Innova Reborn -->
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
+                <img src="https://images.unsplash.com/photo-1617469767053-d3b508a0d84e?auto=format&fit=crop&q=80&w=600" alt="Innova Reborn" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-lg font-bold text-slate-900">Innova Reborn</h3>
-                        <span class="bg-blue-50 text-brand-700 text-[10px] font-bold px-2 py-0.5 rounded">Terlaris</span>
-                    </div>
-                    <div class="h-40 bg-white flex items-center justify-center my-4">
-                        <img src="https://www.toyota.astra.co.id/sites/default/files/2020-10/1-innova-super-white.png" alt="Innova Reborn" class="h-full object-contain">
-                    </div>
-                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
-                        <span class="text-sm font-bold text-brand-600">Lepas Kunci / Supir</span>
-                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Innova%20Reborn.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
+                    <h3 class="text-lg font-bold text-slate-900">Innova Reborn</h3>
+                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Executive Class</span>
+                        <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Innova%20Reborn.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Toyota Fortuner -->
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
+                <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=600" alt="Toyota Fortuner" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-lg font-bold text-slate-900">Toyota Fortuner</h3>
-                        <span class="bg-amber-50 text-amber-700 text-[10px] font-bold px-2 py-0.5 rounded">Premium SUV</span>
-                    </div>
-                    <div class="h-40 bg-white flex items-center justify-center my-4">
-                        <img src="https://www.toyota.astra.co.id/sites/default/files/2024-09/1_fortuner_platinum-white-pearl-mica-attitude-black.png" alt="Fortuner" class="h-full object-contain" onerror="this.src='https://www.toyota.astra.co.id/sites/default/files/2021-11/fortuner-super-white.png'">
-                    </div>
-                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
-                        <span class="text-sm font-bold text-brand-600">Gagah & Mewah</span>
-                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Toyota%20Fortuner.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
+                    <h3 class="text-lg font-bold text-slate-900">Toyota Fortuner</h3>
+                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Premium SUV</span>
+                        <a :href="'https://wa.me/' + admin2 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Toyota%20Fortuner.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Toyota Hiace -->
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
+                <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&q=80&w=600" alt="Toyota Hiace" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-lg font-bold text-slate-900">Toyota Hiace</h3>
-                        <span class="bg-purple-50 text-purple-700 text-[10px] font-bold px-2 py-0.5 rounded">Grup / Rombongan</span>
-                    </div>
-                    <div class="h-40 bg-white flex items-center justify-center my-4">
-                        <img src="https://www.toyota.astra.co.id/sites/default/files/2020-03/hiace-commuter-silver-metallic.png" alt="Hiace" class="h-full object-contain">
-                    </div>
-                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
-                        <span class="text-sm font-bold text-brand-600">Kapasitas Luas</span>
-                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Toyota%20Hiace.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
+                    <h3 class="text-lg font-bold text-slate-900">Toyota Hiace</h3>
+                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Group Tour Van</span>
+                        <a :href="'https://wa.me/' + admin3 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Toyota%20Hiace.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Toyota Avanza -->
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
+                <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&q=80&w=600" alt="Toyota Avanza" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-lg font-bold text-slate-900">Toyota Avanza</h3>
-                        <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded">Irit Ekonomis</span>
-                    </div>
-                    <div class="h-40 bg-white flex items-center justify-center my-4">
-                        <img src="https://www.toyota.astra.co.id/sites/default/files/2021-11/1-avanza-purplish-silver.png" alt="Avanza" class="h-full object-contain">
-                    </div>
-                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
-                        <span class="text-sm font-bold text-brand-600">Mobil Keluarga</span>
-                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Toyota%20Avanza.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
+                    <h3 class="text-lg font-bold text-slate-900">Toyota Avanza</h3>
+                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Family Car</span>
+                        <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Toyota%20Avanza.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Mitsubishi Xpander -->
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
+                <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&q=80&w=600" alt="Mitsubishi Xpander" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-lg font-bold text-slate-900">Mitsubishi Xpander</h3>
-                        <span class="bg-blue-50 text-brand-700 text-[10px] font-bold px-2 py-0.5 rounded">Nyaman Modern</span>
-                    </div>
-                    <div class="h-40 bg-white flex items-center justify-center my-4">
-                        <img src="https://mitsubishisurabaya.com/wp-content/uploads/2021/11/xpander-white.png" alt="Xpander" class="h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=400'">
-                    </div>
-                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
-                        <span class="text-sm font-bold text-brand-600">Suspensi Empuk</span>
-                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Mitsubishi%20Xpander.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
+                    <h3 class="text-lg font-bold text-slate-900">Mitsubishi Xpander</h3>
+                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Modern Comfort</span>
+                        <a :href="'https://wa.me/' + admin2 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Mitsubishi%20Xpander.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Daihatsu Gran Max PU -->
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
+                <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&q=80&w=600" alt="Daihatsu Grand Max PU" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-lg font-bold text-slate-900">Gran Max Pick Up</h3>
-                        <span class="bg-orange-50 text-orange-700 text-[10px] font-bold px-2 py-0.5 rounded">Angkutan Barang</span>
-                    </div>
-                    <div class="h-40 bg-white flex items-center justify-center my-4">
-                        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=400" alt="Gran Max PU" class="h-full object-cover rounded-xl">
-                    </div>
-                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
-                        <span class="text-sm font-bold text-brand-600">Solusi Pindahan</span>
-                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Daihatsu%20Gran%20Max%20PU.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
+                    <h3 class="text-lg font-bold text-slate-900">Daihatsu Grand Max PU</h3>
+                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Kargo & Pindahan</span>
+                        <a :href="'https://wa.me/' + admin3 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Daihatsu%20Gran%20Max%20PU.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Grid Katalog Motor -->
         <div x-show="tab === 'motor'" x-cloak class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Yamaha NMAX -->
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
+                <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80&w=600" alt="Yamaha NMAX" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-lg font-bold text-slate-900">Yamaha NMAX</h3>
-                        <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded">Maxi Scooter</span>
-                    </div>
-                    <div class="h-40 bg-white flex items-center justify-center my-4">
-                        <img src="https://www.yamaha-motor.co.id/uploads/product/product_category_premium_nmax_155_connected_abs_signature_black_2023.png" alt="NMAX" class="h-full object-contain">
-                    </div>
-                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
-                        <span class="text-sm font-bold text-brand-600">Nyaman Jarak Jauh</span>
-                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Yamaha%20NMAX.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
+                    <h3 class="text-lg font-bold text-slate-900">Yamaha NMAX</h3>
+                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Maxi Scooter</span>
+                        <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Yamaha%20NMAX.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Honda PCX -->
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
+                <img src="https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?auto=format&fit=crop&q=80&w=600" alt="Honda PCX" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-lg font-bold text-slate-900">Honda PCX</h3>
-                        <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded">Premium Scooter</span>
-                    </div>
-                    <div class="h-40 bg-white flex items-center justify-center my-4">
-                        <img src="https://www.astra-honda.com/files/subproduct/pcx-160/2023/subproduct-banner-pcx-405x370-px-marvelous-matte-silver-1-24102023-045330.png" alt="PCX" class="h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80&w=400'">
-                    </div>
-                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
-                        <span class="text-sm font-bold text-brand-600">Eksklusif & Elegan</span>
-                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Honda%20PCX.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
+                    <h3 class="text-lg font-bold text-slate-900">Honda PCX</h3>
+                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Premium Matic</span>
+                        <a :href="'https://wa.me/' + admin2 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Honda%20PCX.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Honda Beat -->
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
+                <img src="https://images.unsplash.com/photo-1622185135505-2d795003994a?auto=format&fit=crop&q=80&w=600" alt="Honda Beat" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-lg font-bold text-slate-900">Honda Beat</h3>
-                        <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded">Paling Irit</span>
-                    </div>
-                    <div class="h-40 bg-white flex items-center justify-center my-4">
-                        <img src="https://www.astra-honda.com/files/subproduct/beat/2024/01-BEAT-DELUXE-BLACK-1.png" alt="Beat" class="h-full object-contain">
-                    </div>
-                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
-                        <span class="text-sm font-bold text-brand-600">Lincah & Hemat</span>
-                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Honda%20Beat.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
+                    <h3 class="text-lg font-bold text-slate-900">Honda Beat</h3>
+                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Irit & Lincah</span>
+                        <a :href="'https://wa.me/' + admin3 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Honda%20Beat.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Honda Vario -->
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
+                <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&q=80&w=600" alt="Honda Vario" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-lg font-bold text-slate-900">Honda Vario</h3>
-                        <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded">Tenaga Kuat</span>
-                    </div>
-                    <div class="h-40 bg-white flex items-center justify-center my-4">
-                        <img src="https://www.astra-honda.com/files/subproduct/vario-160/2024/VARIO_160_MINI_BANNER_405x370_GRANDE_MATTE_WHITE_2.png" alt="Vario" class="h-full object-contain">
-                    </div>
-                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
-                        <span class="text-sm font-bold text-brand-600">Harian Handal</span>
-                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Honda%20Vario.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
+                    <h3 class="text-lg font-bold text-slate-900">Honda Vario</h3>
+                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Daily Power</span>
+                        <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Honda%20Vario.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Honda Supra X -->
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition duration-300">
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
+                <img src="https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?auto=format&fit=crop&q=80&w=600" alt="Honda Supra X" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-lg font-bold text-slate-900">Honda Supra X</h3>
-                        <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded">Bebek Legendaris</span>
-                    </div>
-                    <div class="h-40 bg-white flex items-center justify-center my-4">
-                        <img src="https://www.astra-honda.com/files/subproduct/supra-x-125-fi/2023/subproduct-banner-suprax-405x370-quantum-matte-black-1-24102023-045749.png" alt="Supra X" class="h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?auto=format&fit=crop&q=80&w=400'">
-                    </div>
-                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
-                        <span class="text-sm font-bold text-brand-600">Tangguh & Kuat Nanjak</span>
-                        <a :href="'https://wa.me/' + whatsappNumber + '?text=Halo%20Arbi%20Trans,%20saya%20ingin%20sewa%20Honda%20Supra%20X.'" target="_blank" class="bg-slate-900 hover:bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition">Hubungi WA</a>
+                    <h3 class="text-lg font-bold text-slate-900">Honda Supra X</h3>
+                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Tangguh Hebat</span>
+                        <a :href="'https://wa.me/' + admin2 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20sewa%20Honda%20Supra%20X.'" target="_blank" class="bg-brand-800 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-brand-600 transition">Hubungi WA</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Keunggulan Layanan -->
-    <section id="keunggulan" class="bg-slate-900 text-slate-400 py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl font-black text-white">Mengapa Memilih Kami?</h2>
-                <p class="text-slate-400 mt-2">Arbi Trans mengutamakan keselamatan dan efisiensi waktu perjalanan Anda.</p>
+    <section class="bg-gradient-to-r from-brand-500 to-orange-500 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="space-y-2 text-center md:text-left">
+                <h2 class="text-3xl font-black tracking-tight">Sewa Mobil Sekarang</h2>
+                <p class="text-orange-50 max-w-2xl text-sm leading-relaxed">Pilihan mobil lengkap, harga transparan, dan layanan profesional untuk kebutuhan bisnis maupun pribadi hanya di Arbi Rental Purwokerto.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-800">
-                    <div class="w-12 h-12 bg-brand-600 text-white rounded-xl flex items-center justify-center text-xl mb-4 mx-auto font-bold shadow-lg shadow-brand-600/20">
-                        <i class="fas fa-check-double"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-white mb-2">Armada Terawat</h4>
-                    <p class="text-slate-400 text-sm">Semua unit selalu dibersihkan dan melalui inspeksi ketat berkala sebelum diserahkan ke tangan konsumen.</p>
-                </div>
-                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-800">
-                    <div class="w-12 h-12 bg-brand-600 text-white rounded-xl flex items-center justify-center text-xl mb-4 mx-auto font-bold shadow-lg shadow-brand-600/20">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-white mb-2">Instruktur Ahli</h4>
-                    <p class="text-slate-400 text-sm">Khusus layanan kursus setir, Anda dibimbing penuh oleh instruktur penyabar yang berlisensi.</p>
-                </div>
-                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-800">
-                    <div class="w-12 h-12 bg-brand-600 text-white rounded-xl flex items-center justify-center text-xl mb-4 mx-auto font-bold shadow-lg shadow-brand-600/20">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-white mb-2">Respon Cepat 24 Jam</h4>
-                    <p class="text-slate-400 text-sm">Customer care kami siap membantu kebutuhan booking darurat atau konsultasi wisata kapan saja.</p>
-                </div>
+            <div>
+                <a :href="'https://wa.me/' + admin1" target="_blank" class="bg-transparent hover:bg-white hover:text-brand-600 text-white font-bold border-2 border-white px-6 py-3 rounded-full flex items-center gap-2 transition text-sm tracking-wider uppercase">
+                    <i class="fab fa-whatsapp text-lg"></i> BOOK NOW
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer Ringkas Modern -->
-    <footer class="bg-slate-950 text-slate-500 py-12 border-t border-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-            <span class="font-black text-2xl text-white tracking-tight">Arbi<span class="text-brand-500">Trans</span></span>
-            <p class="text-xs max-w-md mx-auto">Garasi Utama: Jl. Kober Gg. Radiul No.51, Kober, Purwokerto Barat, Banyumas, Jawa Tengah 53132</p>
-            <p class="text-xs text-slate-700 pt-4">&copy; 2026 Arbi Trans. Hak Cipta Dilindungi Undang-Undang.</p>
+    <footer id="kontak" class="bg-white text-slate-600 pt-16 pb-6 border-t border-slate-100 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            
+            <div class="space-y-4">
+                <div class="bg-brand-800 text-white px-3 py-1.5 rounded inline-block font-black text-md tracking-tight">
+                    <span>ARBI</span> <span class="text-brand-500 text-[10px] block font-bold tracking-widest -mt-1 border-t border-slate-700">TRANS</span>
+                </div>
+                <p class="font-extrabold text-slate-900 leading-snug">Arbi Trans - Sewa Rental Mobil Purwokerto Terdekat.</p>
+                <div class="pt-2">
+                    <a :href="'https://wa.me/' + admin1" target="_blank" class="bg-brand-500 text-white p-3 rounded-xl flex items-center gap-3 shadow-md hover:bg-brand-600 transition">
+                        <div class="bg-white text-brand-500 w-8 h-8 rounded-full flex items-center justify-center text-lg shadow-inner">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-orange-100 font-bold uppercase tracking-wider">Booking & Informasi</p>
+                            <p class="font-black text-sm">0815-4295-2220</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="font-black text-slate-900 text-base border-b border-slate-100 pb-2">Kontak Info</h4>
+                <ul class="space-y-2 font-medium text-slate-700">
+                    <li><i class="fas fa-phone text-brand-500 mr-2"></i> Admin 1: 0815-4295-2220</li>
+                    <li><i class="fas fa-phone text-brand-500 mr-2"></i> Admin 2: 0811-2532-222</li>
+                    <li><i class="fas fa-phone text-brand-500 mr-2"></i> Admin 3: 0811-2543-222</li>
+                </ul>
+                <p class="text-xs text-slate-500 leading-relaxed pt-2">
+                    Jl. Kober Gg. Radiul No.51, Kober, Kec. Purwokerto Bar., Kabupaten Banyumas, Jawa Tengah 53132
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="font-black text-slate-900 text-base border-b border-slate-100 pb-2">Navigasi</h4>
+                <ul class="space-y-2.5 font-bold text-slate-700 text-xs uppercase tracking-wider">
+                    <li><a href="#home" class="hover:text-brand-500 transition inline-flex items-center gap-1.5"><i class="fas fa-chevron-right text-[10px] text-slate-300"></i> Home</a></li>
+                    <li><a href="#kontak" class="hover:text-brand-500 transition inline-flex items-center gap-1.5"><i class="fas fa-chevron-right text-[10px] text-slate-300"></i> Contact us</a></li>
+                    <li><a href="#armada" class="hover:text-brand-500 transition inline-flex items-center gap-1.5"><i class="fas fa-chevron-right text-[10px] text-slate-300"></i> Artikel</a></li>
+                    <li><a href="#" class="hover:text-brand-500 transition inline-flex items-center gap-1.5"><i class="fas fa-chevron-right text-[10px] text-slate-300"></i> Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="font-black text-slate-900 text-base border-b border-slate-100 pb-2">Pembayaran</h4>
+                <div class="grid grid-cols-3 gap-2 font-black text-center text-[10px] text-white">
+                    <span class="bg-blue-700 px-2 py-1.5 rounded flex items-center justify-center tracking-tight">BCA</span>
+                    <span class="bg-orange-600 px-2 py-1.5 rounded flex items-center justify-center tracking-tight">BNI</span>
+                    <span class="bg-blue-600 px-2 py-1.5 rounded flex items-center justify-center tracking-tight">BRI</span>
+                    <span class="bg-slate-800 px-2 py-1.5 rounded flex items-center justify-center text-xs"><i class="fab fa-cc-visa"></i></span>
+                    <span class="bg-red-600 px-2 py-1.5 rounded flex items-center justify-center text-xs"><i class="fab fa-cc-mastercard"></i></span>
+                    <span class="bg-sky-500 px-2 py-1.5 rounded flex items-center justify-center tracking-tight">DANA</span>
+                    <span class="bg-purple-700 px-2 py-1.5 rounded flex items-center justify-center tracking-tight">OVO</span>
+                    <span class="bg-slate-900 px-2 py-1.5 rounded col-span-2 flex items-center justify-center tracking-widest font-extrabold text-amber-400">QRIS</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-100 mt-12 pt-6 text-center text-xs font-bold text-slate-500">
+            Copyright ©2026 — Arbi Trans - Sewa Rental Mobil Purwokerto Terdekat.
         </div>
     </footer>
+
+    <div class="fixed bottom-4 right-4 z-50">
+        <a :href="'https://wa.me/' + admin1 + '?text=Halo%20Arbi%20Rental,%20saya%20ingin%20booking%20unit.'" target="_blank" class="bg-emerald-500 text-white font-extrabold px-4 py-2.5 rounded-full flex items-center gap-1.5 shadow-2xl text-xs hover:bg-emerald-600 transition tracking-wide">
+            <i class="fab fa-whatsapp text-lg"></i> Booking Sekarang Juga !
+        </a>
+    </div>
 
 </body>
 </html>
