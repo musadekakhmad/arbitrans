@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arbi Trans - Sewa Rental Mobil & Motor Purwokerto</title>
-    <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .bg-coral { background-color: #ff5a36; }
@@ -16,28 +14,26 @@
         .border-coral { border-color: #ff5a36; }
         .bg-navy { background-color: #0b1d33; }
         .text-navy { color: #0b1d33; }
-        /* Custom Swiper Pagination Color */
-        .swiper-pagination-bullet-active { background: #ff5a36 !important; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <header class="bg-white sticky top-0 z-50 shadow-sm transition-all duration-300">
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm transition-all duration-300 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex-shrink-0 flex items-center">
-                    <img class="h-14 w-auto" src="arbi.png" alt="Arbi Trans Logo">
+            <div class="flex items-center justify-between h-24">
+                <div class="flex-shrink-0 flex items-center py-2">
+                    <img class="h-16 md:h-20 w-auto object-contain transition-transform duration-300 hover:scale-105" src="arbi.PNG" alt="Arbi Trans Logo">
                 </div>
                 
-                <nav class="hidden md:flex space-x-8 text-[15px] font-semibold tracking-wide">
-                    <a href="#beranda" class="text-coral border-b-2 border-coral pb-1">Beranda</a>
+                <nav class="hidden md:flex space-x-8 text-[15px] font-bold tracking-wide">
+                    <a href="#beranda" class="text-coral border-b-2 border-coral pb-1 transition-all">Beranda</a>
                     <a href="#mobil" class="text-gray-600 hover:text-navy transition-colors duration-200">Mobil</a>
                     <a href="#motor" class="text-gray-600 hover:text-navy transition-colors duration-200">Motor</a>
                     <a href="#hubungi-kami" class="text-gray-600 hover:text-navy transition-colors duration-200">Hubungi Kami</a>
                 </nav>
 
                 <div class="hidden md:block">
-                    <a href="https://wa.me/6281542952220" target="_blank" class="inline-flex items-center space-x-2 border border-coral text-coral hover:bg-coral hover:text-white font-semibold py-2 px-5 rounded-full transition-all duration-200">
+                    <a href="https://wa.me/6281542952220" target="_blank" class="inline-flex items-center space-x-2 bg-coral text-white border border-transparent hover:bg-white hover:text-coral hover:border-coral font-bold py-3 px-6 rounded-full transition-all duration-300 shadow-md transform hover:-translate-y-0.5">
                         <i class="fa-regular fa-comment-dots"></i>
                         <span>BOOK NOW</span>
                     </a>
@@ -46,32 +42,55 @@
         </div>
     </header>
 
-    <section id="beranda" class="relative bg-white pt-10 pb-16 overflow-hidden">
+    <section id="beranda" class="relative bg-gradient-to-b from-white to-gray-50 pt-12 pb-20 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-10">
-                <h1 class="text-3xl md:text-3xl font-bold text-navy mb-4">Solusi Transportasi Terbaik di Banyumas Raya</h1>
-                <p class="text-gray-500 text-lg">Layanan rental mobil dan motor resmi, terpercaya, dengan unit prima untuk kebutuhan bisnis, keluarga, maupun wisata Anda.</p>
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-coral font-extrabold text-sm uppercase tracking-widest bg-coral/10 px-4 py-1.5 rounded-full inline-block mb-3">Official Rental Transport</span>
+                <h1 class="text-3xl md:text-5xl font-extrabold text-navy mb-4 tracking-tight leading-tight">Solusi Transportasi Terbaik di <span class="text-coral">Banyumas Raya</span></h1>
+                <p class="text-gray-500 text-base md:text-lg">Layanan rental mobil dan motor resmi, terpercaya, dengan unit prima untuk kebutuhan bisnis, keluarga, maupun wisata Anda.</p>
             </div>
             
-            <div class="swiper hero-swiper w-full pb-10">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide overflow-hidden rounded-xl shadow-sm group">
-                        <img src="Avanza.png" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300" alt="Armada Avanza">
-                    </div>
-                    <div class="swiper-slide overflow-hidden rounded-xl shadow-sm group">
-                        <img src="Toyota Innova Reborn.png" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300" alt="Armada Innova">
-                    </div>
-                    <div class="swiper-slide overflow-hidden rounded-xl shadow-sm group">
-                        <img src="Toyota Hiace.png" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300" alt="Armada Hiace">
-                    </div>
-                    <div class="swiper-slide overflow-hidden rounded-xl shadow-sm group">
-                        <img src="Isuzu Elf.png" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300" alt="Armada Elf">
-                    </div>
-                    <div class="swiper-slide overflow-hidden rounded-xl shadow-sm group">
-                        <img src="Medium Bus.png" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300" alt="Armada Bus">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="relative overflow-hidden rounded-2xl shadow-md group h-64 bg-navy">
+                    <img src="Avanza.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-85 group-hover:opacity-75" alt="Armada Avanza">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                        <span class="bg-coral text-[10px] uppercase font-extrabold px-2 py-0.5 rounded mb-1.5 inline-block">Terpopuler</span>
+                        <h3 class="font-bold text-base leading-tight">Avanza Class</h3>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="relative overflow-hidden rounded-2xl shadow-md group h-64 bg-navy">
+                    <img src="Toyota Innova Reborn.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-85 group-hover:opacity-75" alt="Armada Innova">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                        <span class="bg-amber-500 text-[10px] uppercase font-extrabold px-2 py-0.5 rounded mb-1.5 inline-block">Premium</span>
+                        <h3 class="font-bold text-base leading-tight">Innova Reborn</h3>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-2xl shadow-md group h-64 bg-navy">
+                    <img src="Toyota Hiace.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-85 group-hover:opacity-75" alt="Armada Hiace">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                        <span class="bg-blue-600 text-[10px] uppercase font-extrabold px-2 py-0.5 rounded mb-1.5 inline-block">Group Tour</span>
+                        <h3 class="font-bold text-base leading-tight">Hiace Commuter</h3>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-2xl shadow-md group h-64 bg-navy">
+                    <img src="Isuzu Elf.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-85 group-hover:opacity-75" alt="Armada Elf">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                        <span class="bg-teal-600 text-[10px] uppercase font-extrabold px-2 py-0.5 rounded mb-1.5 inline-block">Big Capacity</span>
+                        <h3 class="font-bold text-base leading-tight">Isuzu Elf Long</h3>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-2xl shadow-md group h-64 bg-navy sm:col-span-2 lg:col-span-1">
+                    <img src="Medium Bus.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-85 group-hover:opacity-75" alt="Armada Bus">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                        <span class="bg-purple-600 text-[10px] uppercase font-extrabold px-2 py-0.5 rounded mb-1.5 inline-block">Pariwisata</span>
+                        <h3 class="font-bold text-base leading-tight">Medium Bus</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -220,7 +239,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             
             <div class="space-y-4">
-                <img class="h-12 w-auto" src="arbi.png" alt="Arbi Rental">
+                <img class="h-14 w-auto" src="arbi.PNG" alt="Arbi Rental">
                 <p class="font-bold text-navy text-sm">Arbi Rental - Sewa Rental Mobil Purwokerto Terdekat.</p>
                 
                 <a href="https://wa.me/6281542952220" target="_blank" class="flex items-center gap-4 bg-coral text-white p-3 rounded-xl max-w-xs hover:bg-opacity-95 transition">
@@ -242,7 +261,7 @@
                     <li><i class="fa fa-phone text-coral mr-2"></i> Admin 3 0811-2543-222</li>
                     <li class="pt-2 flex items-start">
                         <i class="fa fa-map-marker-alt text-coral mr-2 mt-1 flex-shrink-0"></i>
-                        <span>Jl. Raya Kober, Gg. Anggrek Radiul No.51, Kel. Kober, Kec. Purwokerto Barat, Kabupaten Banyumas, Jawa Tengah 53132</span>
+                        <span>Jl. Kober Gg. Radiul No.51, Kober, Kec. Purwokerto Bar., Kabupaten Banyumas, Jawa Tengah 53132</span>
                     </li>
                 </ul>
             </div>
@@ -250,10 +269,10 @@
             <div class="space-y-3">
                 <h4 class="font-bold text-navy border-b pb-2 text-base">Navigasi</h4>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li><a href="#beranda" class="hover:text-coral transition"><i class="fa fa-chevron-right text-xs text-gray-300 mr-2"></i> Beranda</a></li>
-                    <li><a href="#hubungi-kami" class="hover:text-coral transition"><i class="fa fa-chevron-right text-xs text-gray-300 mr-2"></i> Mobil</a></li>
-                    <li><a href="#" class="hover:text-coral transition"><i class="fa fa-chevron-right text-xs text-gray-300 mr-2"></i> Motor</a></li>
-                    <li><a href="#" class="hover:text-coral transition"><i class="fa fa-chevron-right text-xs text-gray-300 mr-2"></i> Hubungi Kami</a></li>
+                    <li><a href="#beranda" class="hover:text-coral transition"><i class="fa fa-chevron-right text-xs text-gray-300 mr-2"></i> Home</a></li>
+                    <li><a href="#hubungi-kami" class="hover:text-coral transition"><i class="fa fa-chevron-right text-xs text-gray-300 mr-2"></i> Contact us</a></li>
+                    <li><a href="#" class="hover:text-coral transition"><i class="fa fa-chevron-right text-xs text-gray-300 mr-2"></i> Artikel</a></li>
+                    <li><a href="#" class="hover:text-coral transition"><i class="fa fa-chevron-right text-xs text-gray-300 mr-2"></i> Terms & Conditions</a></li>
                 </ul>
             </div>
 
@@ -273,7 +292,7 @@
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-100 mt-12 pt-6 text-center text-xs text-gray-500">
-            Copyright ©2026 — <span class="font-semibold text-gray-700">Arbi Trans - Sewa Rental Mobil dan Motor Banyumas Raya.</span>
+            Copyright ©2026 — <span class="font-semibold text-gray-700">Arbi Rental - Sewa Rental Mobil Purwokerto Terdekat.</span>
         </div>
     </footer>
 
@@ -284,25 +303,5 @@
         </a>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.hero-swiper', {
-            loop: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            // Responsif breakpoint (menentukan jumlah slide tampil berdasarkan lebar layar)
-            breakpoints: {
-                320: { slidesPerView: 2, spaceBetween: 10 },
-                640: { slidesPerView: 3, spaceBetween: 15 },
-                1024: { slidesPerView: 4, spaceBetween: 20 }
-            }
-        });
-    </script>
 </body>
 </html>
