@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arbi Trans - Sewa Rental Mobil & Motor Purwokerto</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .bg-coral { background-color: #ff5a36; }
@@ -14,6 +16,8 @@
         .border-coral { border-color: #ff5a36; }
         .bg-navy { background-color: #0b1d33; }
         .text-navy { color: #0b1d33; }
+        /* Custom Swiper Pagination Color */
+        .swiper-pagination-bullet-active { background: #ff5a36 !important; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -22,7 +26,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0 flex items-center">
-                    <img class="h-14 w-auto" src="arbi.PNG" alt="Arbi Trans Logo">
+                    <img class="h-14 w-auto" src="arbi.png" alt="Arbi Trans Logo">
                 </div>
                 
                 <nav class="hidden md:flex space-x-8 text-[15px] font-semibold tracking-wide">
@@ -45,26 +49,29 @@
     <section id="beranda" class="relative bg-white pt-10 pb-16 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-10">
-                <h1 class="text-3xl md:text-3xl font-bold text-navy mb-4">Solusi Transportasi Terbaik di Banyumas Raya</h1>
+                <h1 class="text-3xl md:text-4xl font-bold text-navy mb-4">Solusi Transportasi Terbaik di Banyumas Raya</h1>
                 <p class="text-gray-500 text-lg">Layanan rental mobil dan motor resmi, terpercaya, dengan unit prima untuk kebutuhan bisnis, keluarga, maupun wisata Anda.</p>
             </div>
             
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-                <div class="overflow-hidden rounded-xl shadow-sm group">
-                    <img src="Avanza.png" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300" alt="Armada Avanza">
+            <div class="swiper hero-swiper w-full pb-10">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide overflow-hidden rounded-xl shadow-sm group">
+                        <img src="Avanza.png" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300" alt="Armada Avanza">
+                    </div>
+                    <div class="swiper-slide overflow-hidden rounded-xl shadow-sm group">
+                        <img src="Toyota Innova Reborn.png" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300" alt="Armada Innova">
+                    </div>
+                    <div class="swiper-slide overflow-hidden rounded-xl shadow-sm group">
+                        <img src="Toyota Hiace.png" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300" alt="Armada Hiace">
+                    </div>
+                    <div class="swiper-slide overflow-hidden rounded-xl shadow-sm group">
+                        <img src="Isuzu Elf.png" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300" alt="Armada Elf">
+                    </div>
+                    <div class="swiper-slide overflow-hidden rounded-xl shadow-sm group">
+                        <img src="Medium Bus.png" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300" alt="Armada Bus">
+                    </div>
                 </div>
-                <div class="overflow-hidden rounded-xl shadow-sm group">
-                    <img src="Toyota Innova Reborn.png" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300" alt="Armada Innova">
-                </div>
-                <div class="overflow-hidden rounded-xl shadow-sm group">
-                    <img src="Toyota Hiace.png" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300" alt="Armada Hiace">
-                </div>
-                <div class="overflow-hidden rounded-xl shadow-sm group">
-                    <img src="Isuzu Elf.png" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300" alt="Armada Elf">
-                </div>
-                <div class="overflow-hidden rounded-xl shadow-sm group">
-                    <img src="Medium Bus.png" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300" alt="Armada Bus">
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
@@ -213,7 +220,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             
             <div class="space-y-4">
-                <img class="h-12 w-auto" src="arbi.PNG" alt="Arbi Rental">
+                <img class="h-12 w-auto" src="arbi.png" alt="Arbi Rental">
                 <p class="font-bold text-navy text-sm">Arbi Rental - Sewa Rental Mobil Purwokerto Terdekat.</p>
                 
                 <a href="https://wa.me/6281542952220" target="_blank" class="flex items-center gap-4 bg-coral text-white p-3 rounded-xl max-w-xs hover:bg-opacity-95 transition">
@@ -277,5 +284,25 @@
         </a>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.hero-swiper', {
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            // Responsif breakpoint (menentukan jumlah slide tampil berdasarkan lebar layar)
+            breakpoints: {
+                320: { slidesPerView: 2, spaceBetween: 10 },
+                640: { slidesPerView: 3, spaceBetween: 15 },
+                1024: { slidesPerView: 4, spaceBetween: 20 }
+            }
+        });
+    </script>
 </body>
 </html>
