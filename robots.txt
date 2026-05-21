@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arbitrans.pages.dev/sitemap.xml
