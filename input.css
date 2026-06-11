@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-coral: #ff5a36;
+  --color-navy: #0b1d33;
+  
+  /* Menambahkan Font Roboto */
+  --font-roboto: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}

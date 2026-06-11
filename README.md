@@ -1,2 +1,0 @@
-# arbitrans
-Solusi Transportasi Anda

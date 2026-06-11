@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
 
+# Mengizinkan semua bot merayapi seluruh aset gambar dan halaman web
+Allow: /*.html$
+Allow: /*.webp$
+Allow: /*.jpg$
+Allow: /*.png$
+
+# Tautkan lokasi sitemap utama Anda untuk mempercepat indeksasi
 Sitemap: https://arbitrans.pages.dev/sitemap.xml
